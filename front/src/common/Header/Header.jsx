@@ -1,4 +1,4 @@
-import Menu from '../Menu/Menu';
+//import Menu from '../Menu/Menu';
 
 export default function Header() {
     return(
@@ -42,7 +42,9 @@ export default function Header() {
                 </div> */}
                 
                 <div className="header__middle">
-                    <h2>Header</h2>
+                    <div className="container">
+                        <h2>Header</h2>
+                    </div>
                 </div>
 
                 {/* <div className="header__buttom">
