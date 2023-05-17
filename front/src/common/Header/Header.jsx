@@ -42,9 +42,7 @@ export default function Header() {
                 </div> */}
                 
                 <div className="header__middle">
-                    <div className="container">
-                        <h2>Header</h2>
-                    </div>
+                    <h2>Header</h2>
                 </div>
 
                 {/* <div className="header__buttom">

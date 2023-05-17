@@ -1,4 +1,4 @@
-/* import './menu.css';
+import './menu.css';
 
 export default function Menu (){
     return(
@@ -10,4 +10,4 @@ export default function Menu (){
             </ul>
         </nav>
     );
-} */
+}
