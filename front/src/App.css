@@ -19,7 +19,14 @@
 
 
 
+@media (min-width:321px) {
+    .container {
+        background-color: red;
+        max-width: 600px;
+    }
 
+    .title {}
+}
 
 
 /*Tablet*/
