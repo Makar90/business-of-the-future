@@ -1,4 +1,5 @@
 //import Menu from '../Menu/Menu';
+import {header__icons_svg} from '../../data/icons';
 
 
 export default function Header() {
@@ -43,15 +44,33 @@ export default function Header() {
                 </div> */}
                 
                 <div className="header__middle">
-                    <div className="header__middle-search">
-                        <svg fill="#000000" width="40px" height="40px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                    <div className="header__middle-left">
+                        <div className="header__middle-left-search">
+                            {/* <svg className="header__interactive-icon" fill="#000000" width="40px" height="40px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                                <title>Пошук</title>
                                 <path 
                                     d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z" 
                                     fill="currentcolor"
                                 />
-                        </svg>
+                            </svg> */}
+                            {header__icons_svg.search}
+                        </div>
                     </div>
-                    <h2>Header</h2>
+
+                    <div className="header__middle-center">
+                        <h2>Header</h2>
+                    </div>
+                    
+                    <div className="header__middle-right">
+                        <div className="header__middle-right-user">                        
+                            <svg className="header__interactive-icon" fill="currentcolor" width="40px" height="40px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <title>Зілогінитись</title>
+                                <path 
+                                    d="M4 28q0 0.832 0.576 1.44t1.44 0.576h20q0.8 0 1.408-0.576t0.576-1.44q0-1.44-0.672-2.912t-1.76-2.624-2.496-2.144-2.88-1.504q1.76-1.088 2.784-2.912t1.024-3.904v-1.984q0-3.328-2.336-5.664t-5.664-2.336-5.664 2.336-2.336 5.664v1.984q0 2.112 1.024 3.904t2.784 2.912q-1.504 0.544-2.88 1.504t-2.496 2.144-1.76 2.624-0.672 2.912z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
 
                 {/* <div className="header__buttom">
