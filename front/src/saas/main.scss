@@ -6,3 +6,12 @@
 //global
 @import './global/reset.scss';
 @import './global/app.scss';
+
+//common section
+@import '../common/Header/header.scss';
+@import '../common/Main/main.scss';
+@import '../common/Footer/footer.scss';
+
+//components
+@import '../components/Menu/menu.scss';
+

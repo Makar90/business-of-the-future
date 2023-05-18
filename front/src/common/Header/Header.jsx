@@ -1,5 +1,5 @@
 //import Menu from '../Menu/Menu';
-import './header.scss';
+
 
 export default function Header() {
     return(
