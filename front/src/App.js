@@ -1,4 +1,4 @@
-import './App.css';
+import './saas/main.scss';
 
 import Header from './common/Header/Header';
 import Main from './common/Main/Main';

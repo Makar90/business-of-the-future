@@ -1,9 +1,9 @@
-import './index.css';
+import './main.scss';
 
 export default function Main(){
     return(
         <main>
-            <div className="main__container container">
+            <div className="container">
                 <h2>Main</h2>
             </div>
         </main>
