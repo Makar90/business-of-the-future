@@ -3,6 +3,16 @@
     flex-direction: column; */
 }
 
-header{
-    
+.header{
+    &__middle{
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        &-search{
+            //background-image: url('../../../public/icons/search.svg');
+            width:40px;
+            height: 40px;
+            color:red;
+        }
+    }
 }
