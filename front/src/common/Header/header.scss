@@ -6,7 +6,7 @@
 .header{
     &__middle{
         display:flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         &-left{
             &-search svg{
@@ -18,15 +18,18 @@
         }
 
         &-right{
+            display: flex;
             &-user svg{
             }
         }
     }
 
-    &__interactive-icon{
+    &__icon svg{
         width:40px;
         height: 40px;
         color:gray;
+        /* viewBox: 0 0 24 24;
+        stroke-width: 1; */
         &:hover{
             cursor:pointer;
             color:orange;

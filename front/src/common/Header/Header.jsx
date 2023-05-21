@@ -1,13 +1,31 @@
 //import Menu from '../Menu/Menu';
-import {header__icons_svg} from '../../data/icons';
+import './header.scss';
+import {header_icons_svg} from '../../data/icons';
 
 
 export default function Header() {
+
+    function Get_Login_Icon(login_flag){
+        let icon;
+        switch (login_flag){
+            case ('logined_female'): 
+                icon= header_icons_svg.logined_female;
+                break;
+            case ('logined_man'): 
+                icon= header_icons_svg.logined_man;
+                break;
+            default:
+                icon= header_icons_svg.login;
+                break;
+        }
+        return icon;
+    }
+
     return(
         <header className="header">
             <div className="container header__container">
-                {/* <div className="header__top">
-                    <div class="features">
+                <div className="header__top">
+                    {/* <div class="features">
                         <a href="/delivery/" class="current bg1 feature">
                             <span data-text="Мы доставляем парфюмерию и косметику  бесплатно по Украине без предоплат и комиссий за перевод денег.">
                                 <span>Бесплатная доставка по Украине!</span>
@@ -39,43 +57,59 @@ export default function Header() {
                         <div class="project-link">
                             <a href="https://club.makeup.com.ua/" class="header-top-list__link bc-about-link">Beauty Club</a>
                         </div>
-                    </div>
-
-                </div> */}
+                    </div> */}
+                </div>
                 
                 <div className="header__middle">
                     <div className="header__middle-left">
-                        <div className="header__middle-left-search">
-                            {/* <svg className="header__interactive-icon" fill="#000000" width="40px" height="40px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
-                                <title>Пошук</title>
-                                <path 
-                                    d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z" 
-                                    fill="currentcolor"
-                                />
-                            </svg> */}
-                            {header__icons_svg.search}
-                        </div>
+                        
+                            <div className="header__middle-left-iconSearch  
+                                            header__icon ">
+                                {header_icons_svg.search}
+                            </div>  
+                            
                     </div>
+                   
 
                     <div className="header__middle-center">
-                        <h2>Header</h2>
+                        <a href='/'>
+                            <div className='header__logo'>
+                                <img src="./pictures/logo.svg" alt="" width="100px" height="100px" title='Шопери'/>
+                            </div>
+                        </a>
                     </div>
                     
                     <div className="header__middle-right">
-                        <div className="header__middle-right-user">                        
-                            <svg className="header__interactive-icon" fill="currentcolor" width="40px" height="40px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                <title>Зілогінитись</title>
-                                <path 
-                                    d="M4 28q0 0.832 0.576 1.44t1.44 0.576h20q0.8 0 1.408-0.576t0.576-1.44q0-1.44-0.672-2.912t-1.76-2.624-2.496-2.144-2.88-1.504q1.76-1.088 2.784-2.912t1.024-3.904v-1.984q0-3.328-2.336-5.664t-5.664-2.336-5.664 2.336-2.336 5.664v1.984q0 2.112 1.024 3.904t2.784 2.912q-1.504 0.544-2.88 1.504t-2.496 2.144-1.76 2.624-0.672 2.912z">
-                                </path>
-                            </svg>
+                        <a href='/shopers'>
+                            <div className="header__middle-right-login
+                                            header__icon" 
+                                title="Залогінитись">                        
+                                {Get_Login_Icon('logined_female')}
+                            </div>
+                        </a>
+                        <div className="header__middle-right-login
+                                        header__icon">                        
+                            {header_icons_svg.basket}
                         </div>
+
+
+
+                        {/* <div className="header__middle-right-login
+                                        header__icon">                        
+                            {header_icons_svg.logined_female}
+                        </div>                       
+
+                        <div className="header__middle-right-login
+                                        header__icon">                        
+                            {header_icons_svg.basket}
+                        </div> */}
                     </div>
                 </div>
 
                 {/* <div className="header__buttom">
                     <Menu/>
                 </div> */}
+
             </div>
         </header>
     )
