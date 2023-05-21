@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { header_icons } from "./data"
+import { header_icons } from "./data.jsx";
 import './headerIcon.scss';
 
 export default function HeaderIcon(props){  
