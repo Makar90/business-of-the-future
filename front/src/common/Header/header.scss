@@ -37,7 +37,8 @@
             color:orange;
             }
     }
-    &__icon--fake svg{
+    &__icon--null svg{
+        visibility: hidden;
         &:hover{
             cursor:auto;
             }

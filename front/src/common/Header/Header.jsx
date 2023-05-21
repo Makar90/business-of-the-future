@@ -66,6 +66,16 @@ export default function Header() {
                     <div className="header__middle-left">                         
                         {/* <Headericon icon_name="Search" route_link="/search"/>
                         <Headericon icon_name=""/>  */}
+                        <Link to='/search'>
+                            <div className="header__middle-right-login
+                                            header__icon">                        
+                                {header_icons_svg.search}
+                            </div>
+                        </Link>
+                        <div className="header__middle-right-login
+                                            header__icon header__icon--null">                        
+                                {header_icons_svg.search}
+                        </div>
                     </div>                   
 
                     <div className="header__middle-center">
