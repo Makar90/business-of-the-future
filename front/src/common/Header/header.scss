@@ -37,4 +37,9 @@
             color:orange;
             }
     }
+    &__icon--fake svg{
+        &:hover{
+            cursor:auto;
+            }
+    }
 }

@@ -2,7 +2,7 @@
 import './header.scss';
 import {header_icons_svg} from '../../data/icons';
 import { Link } from 'react-router-dom';
-import HeaderIcon from './header_icon/HeaderIcon';
+import HeaderIcon from './Header_icon/HeaderIcon';
 
 
 export default function Header() {
@@ -63,20 +63,9 @@ export default function Header() {
                 </div>
                 
                 <div className="header__middle">
-                    <div className="header__middle-left">
-                        <Link to='/search'>
-                            <div className="header__middle-left-iconSearch  
-                                            header__icon ">
-                                {header_icons_svg.search}
-                            </div>  
-                        </Link>
-                        <Link to='/search'>
-                            <div className="header__middle-left-iconSearch  
-                                            header__icon ">
-                                {header_icons_svg.empty}
-                            </div> 
-                        </Link>   
-                        <HeaderIcon name="empty"/>
+                    <div className="header__middle-left">                         
+                        <HeaderIcon icon_name="Search" route_link="/search"/>
+                        <HeaderIcon icon_name=""/>
                     </div>                   
 
                     <div className="header__middle-center">

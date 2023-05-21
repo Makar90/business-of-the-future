@@ -1,24 +1,19 @@
-export const header_icons={
-    empty:{
-        title: {
-            en:"empty",
-            ua:"",
+export const header_icons=[
+    {
+        name: {
+            en:"Empty",
+            ua:"Пусто",
         },
-        route_link:"",
         icon:
-            <svg viewBox="0 0 24 24" stroke-width="0.8" fill="none" xmlns="http://www.w3.org/2000/svg">            
+            <svg viewBox="0 0 24 24" strokeWidth="0.8" fill="none" xmlns="http://www.w3.org/2000/svg">            
             </svg>,
     },
-    search:{
-        title: {
-            en:"",
+    {
+        name: {
+            en:"Search",
             ua:"Пошук",
         },
-        route_link:"/search",
-        icon:
-            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentcolor" stroke-width="2.2"><circle cx="28" cy="28" r="20"/><line x1="56" y1="56" x2="42.14" y2="42.14"/>
-                <title>Пошук</title>
-            </svg>,
+        icon:<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentcolor" strokeWidth="2.2"><circle cx="28" cy="28" r="20"/><line x1="56" y1="56" x2="42.14" y2="42.14"/></svg>,
     },
     /* login:
         <svg fill="currentcolor" width="800px" height="800px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -49,4 +44,4 @@ export const header_icons={
             <circle cx="17" cy="20" r="1" fill="currentcolor"/>
             <circle cx="9" cy="20" r="1" fill="currentcolor"/>
         </svg>, */
-}
+]
