@@ -1,4 +1,4 @@
-export const header_icons=[
+export const headericons=[
     {
         name: {
             en:"Empty",

@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
-import { header_icons } from "./data.jsx";
-import './headerIcon.scss';
 
-export default function HeaderIcon(props){  
+
+import './headerIcon.scss';
+import {headericons} from './data.jsx';
+
+export default function Headericon(props){  
     
 
     if(props.icon_name===''){
@@ -13,7 +15,7 @@ export default function HeaderIcon(props){
         )
     } else{
         let icon_element; 
-        header_icons.forEach((item)=>{
+        headericons.forEach((item)=>{
             if(item.name.en===props.icon_name){
                 icon_element=item;
             }                
