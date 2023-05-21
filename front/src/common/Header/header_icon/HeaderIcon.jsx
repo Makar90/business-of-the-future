@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
-import { header_icons } from "./data"
+//import { Link } from "react-router-dom";
+//import { header_icons } from "./data"
 import './headerIcon.scss';
 
 export default function HeaderIcon(props){  
     
 
-    if(props.icon_name===''){
+    /* if(props.icon_name===''){
         return(
             <div className='header-icon header-icon--fake'>
                 <svg></svg>
@@ -40,5 +40,10 @@ export default function HeaderIcon(props){
         }else{
             return(<>error icon</>)
         }
-    }
+    } */
+    return (
+        <div className='header-icon header-icon--fake'>
+                <svg></svg>
+        </div>
+    )
 }
