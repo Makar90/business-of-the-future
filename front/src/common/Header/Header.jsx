@@ -2,7 +2,6 @@
 import './header.scss';
 import {header_icons_svg} from '../../data/icons';
 import { Link } from 'react-router-dom';
-//import Headericon from './Header_icon/Headericon.jsx';
 
 
 export default function Header() {
