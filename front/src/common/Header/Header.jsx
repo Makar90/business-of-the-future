@@ -63,14 +63,19 @@ export default function Header() {
                 
                 <div className="header__middle">
                     <div className="header__middle-left">
-                        
+                        <Link to='/search'>
                             <div className="header__middle-left-iconSearch  
                                             header__icon ">
                                 {header_icons_svg.search}
                             </div>  
-                            
-                    </div>
-                   
+                        </Link>
+                        <Link to='/search'>
+                            <div className="header__middle-left-iconSearch  
+                                            header__icon ">
+                                {header_icons_svg.search}
+                            </div> 
+                        </Link>                            
+                    </div>                   
 
                     <div className="header__middle-center">
                         <Link to='/'>
@@ -81,17 +86,19 @@ export default function Header() {
                     </div>
                     
                     <div className="header__middle-right">
-                        <Link to='/shopers'>
+                        <Link to='/login'>
                             <div className="header__middle-right-login
                                             header__icon" 
                                 title="Залогінитись">                        
                                 {Get_Login_Icon('logined_female')}
                             </div>
                         </Link>
-                        <div className="header__middle-right-login
-                                        header__icon">                        
-                            {header_icons_svg.basket}
-                        </div>
+                        <Link to='/shopcart'>
+                            <div className="header__middle-right-login
+                                            header__icon">                        
+                                {header_icons_svg.basket}
+                            </div>
+                        </Link>
 
 
 

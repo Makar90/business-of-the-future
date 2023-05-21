@@ -2,14 +2,19 @@ import { Routes, Route} from 'react-router-dom';
 
 import './main.scss';
 import Home from '../../pages/home/Home';
-import Shopers from '../../pages/shopers/Shopers';
+import Shopers from '../../pages/Categories/shopers/Shopers';
+import Search from '../../pages/search/search';
+import ShopCart from '../../pages/shopcart/ShopCart';
+import Login from '../../pages/login/Login';
 
 export default function Main(){
     return(
         <main>
             <div className="container">  
-            <h2>Main</h2> 
                 <Routes>
+                    <Route path='/search' element={<Search />} />
+                    <Route path='/login' element={<Login />} />
+                    <Route path='/shopcart' element={<ShopCart />} />
                     <Route path='/' element={<Home />} />
                     <Route path='/shopers' element={<Shopers />} />
                 </Routes>
