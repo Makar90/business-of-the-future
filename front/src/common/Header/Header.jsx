@@ -64,8 +64,8 @@ export default function Header() {
                 
                 <div className="header__middle">
                     <div className="header__middle-left">                         
-                        <HeaderIcon icon_name="Search" route_link="/search"/>
-                        <HeaderIcon icon_name=""/>
+                        {/* <HeaderIcon icon_name="Search" route_link="/search"/>
+                        <HeaderIcon icon_name=""/> */}
                     </div>                   
 
                     <div className="header__middle-center">
