@@ -1,12 +1,26 @@
-export const header_icons_svg={
-    empty:
-        <svg viewBox="0 0 24 24" stroke-width="0.8" fill="none" xmlns="http://www.w3.org/2000/svg">            
-        </svg>,
-    search:
-        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentcolor" stroke-width="2.2"><circle cx="28" cy="28" r="20"/><line x1="56" y1="56" x2="42.14" y2="42.14"/>
-            <title>Пошук</title>
-        </svg>,
-    login:
+export const header_icons={
+    empty:{
+        title: {
+            en:"empty",
+            ua:"",
+        },
+        route_link:"",
+        icon:
+            <svg viewBox="0 0 24 24" stroke-width="0.8" fill="none" xmlns="http://www.w3.org/2000/svg">            
+            </svg>,
+    },
+    search:{
+        title: {
+            en:"",
+            ua:"Пошук",
+        },
+        route_link:"/search",
+        icon:
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentcolor" stroke-width="2.2"><circle cx="28" cy="28" r="20"/><line x1="56" y1="56" x2="42.14" y2="42.14"/>
+                <title>Пошук</title>
+            </svg>,
+    },
+    /* login:
         <svg fill="currentcolor" width="800px" height="800px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <title>Зілогінитись</title>
             <path d="M16 16.75c4.28 0 7.75-3.47 7.75-7.75s-3.47-7.75-7.75-7.75c-4.28 0-7.75 3.47-7.75 7.75v0c0.005 4.278 3.472 7.745 7.75 7.75h0zM16 2.75c3.452 0 6.25 2.798 6.25 6.25s-2.798 6.25-6.25 6.25c-3.452 0-6.25-2.798-6.25-6.25v0c0.004-3.45 2.8-6.246 6.25-6.25h0zM30.41 29.84c-1.503-6.677-7.383-11.59-14.41-11.59s-12.907 4.913-14.391 11.491l-0.019 0.099c-0.011 0.048-0.017 0.103-0.017 0.16 0 0.414 0.336 0.75 0.75 0.75 0.357 0 0.656-0.25 0.731-0.585l0.001-0.005c1.351-5.998 6.633-10.41 12.945-10.41s11.594 4.413 12.929 10.322l0.017 0.089c0.076 0.34 0.374 0.59 0.732 0.59 0 0 0.001 0 0.001 0h-0c0.057-0 0.112-0.007 0.165-0.019l-0.005 0.001c0.34-0.076 0.59-0.375 0.59-0.733 0-0.057-0.006-0.112-0.018-0.165l0.001 0.005z"></path>
@@ -34,5 +48,5 @@ export const header_icons_svg={
             <path d="M14.1787 14.5H11.1376C9.85836 14.5 9.21875 14.5 8.71781 14.1697C8.21687 13.8394 7.96492 13.2515 7.461 12.0757L7.29218 11.6818C6.48269 9.79294 6.07794 8.84853 6.52255 8.17426C6.96715 7.5 7.99464 7.5 10.0496 7.5H15.3305C17.6295 7.5 18.779 7.5 19.2126 8.24711C19.6462 8.99422 19.0758 9.99229 17.9352 11.9884L17.6517 12.4846C17.0897 13.4679 16.8088 13.9596 16.3432 14.2298C15.8776 14.5 15.3113 14.5 14.1787 14.5Z" stroke="currentcolor" stroke-linecap="round"/>
             <circle cx="17" cy="20" r="1" fill="currentcolor"/>
             <circle cx="9" cy="20" r="1" fill="currentcolor"/>
-        </svg>,
+        </svg>, */
 }
