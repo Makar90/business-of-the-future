@@ -74,7 +74,7 @@ export default function Header() {
                         </Link>
                         <div className="header__middle-right-login
                                             header__icon header__icon--null">                        
-                                {header_icons_svg.search}
+                                <svg></svg>
                         </div>
                     </div>                   
 
