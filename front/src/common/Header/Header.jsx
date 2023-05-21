@@ -1,6 +1,7 @@
 //import Menu from '../Menu/Menu';
 import './header.scss';
 import {header_icons_svg} from '../../data/icons';
+import { Link } from 'react-router-dom';
 
 
 export default function Header() {
@@ -72,21 +73,21 @@ export default function Header() {
                    
 
                     <div className="header__middle-center">
-                        <a href='/'>
+                        <Link to='/'>
                             <div className='header__logo'>
                                 <img src="./pictures/logo.svg" alt="" width="100px" height="100px" title='Шопери'/>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                     
                     <div className="header__middle-right">
-                        <a href='/shopers'>
+                        <Link to='/shopers'>
                             <div className="header__middle-right-login
                                             header__icon" 
                                 title="Залогінитись">                        
                                 {Get_Login_Icon('logined_female')}
                             </div>
-                        </a>
+                        </Link>
                         <div className="header__middle-right-login
                                         header__icon">                        
                             {header_icons_svg.basket}
