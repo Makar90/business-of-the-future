@@ -81,7 +81,7 @@ export default function Header() {
                     </div>
                     
                     <div className="header__middle-right">
-                        <Link to='/shopers'>
+                        <Link to='shopers'>
                             <div className="header__middle-right-login
                                             header__icon" 
                                 title="Залогінитись">                        
