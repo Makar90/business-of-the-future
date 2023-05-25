@@ -2,6 +2,7 @@
 import './header.scss';
 import {header_icons_svg} from '../../data/icons';
 import { Link } from 'react-router-dom';
+import HeadersIcon from '../../components/HeadersIcon/HeadersIcon.jsx';
 
 
 export default function Header() {
@@ -71,6 +72,8 @@ export default function Header() {
                                 {header_icons_svg.search}
                             </div>
                         </Link>
+                        <HeadersIcon icon={header_icons_svg.search} link='/search'/>
+                        <HeadersIcon icon=''/>
                         <div className="header__middle-right-login
                                             header__icon header__icon--null">                        
                                 <svg></svg>
@@ -90,7 +93,7 @@ export default function Header() {
                             <div className="header__middle-right-login
                                             header__icon" 
                                 title="Залогінитись">                        
-                                {Get_Login_Icon('logined_female')}
+                                {Get_Login_Icon('login')}
                             </div>
                         </Link>
                         <Link to='/shopcart'>
