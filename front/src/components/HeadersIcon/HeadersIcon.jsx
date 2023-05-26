@@ -5,11 +5,12 @@ import { Link } from 'react-router-dom';
 export default function HeadersIcon(props){
     let link=props.link;
     let icon_name=props.icon_name;
+    let onClickFunc=props.onClickFunc;
     let icon_data = GetIconDataByName(icon_name);
     console.log(icon_data);
     if(icon_name!==''){
         return(
-            <Link to={link}>
+            <Link className={props.className} to={link} onClick={onClickFunc}>
                 <div className="icon" /* header__middle-right-login header__icon */
                         title={icon_data.name.en}>                       
                     {icon_data.icon}

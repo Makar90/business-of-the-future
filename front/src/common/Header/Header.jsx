@@ -8,13 +8,22 @@ import HeadersIcon from '../../components/HeadersIcon/HeadersIcon.jsx';
 export default function Header() {
     let login_flag='false'; // logined_man logined_female
 
-    function MenuOpen(){
-        let menuOpen=document.querySelector('.header__middle-left-menuOpen');
-        let menuClose=document.querySelector('.header__middle-left-menuClose');
-        menuOpen.classList.toggle('header__middle-left-menuOpen--hidden');
-        menuClose.classList.toggle('header__middle-left-menuClose--hidden');
+    function MenuOpenClose(){
+        let menuOpenButton=document.querySelector('.header__middle-left-menuOpen');
+        let menuCloseButton=document.querySelector('.header__middle-left-menuClose');
+        let menu=document.querySelector('.menu');
+        menuOpenButton.classList.toggle('header__middle-left-menuOpen--hidden');
+        menuCloseButton.classList.toggle('header__middle-left-menuClose--hidden');
+        menu.classList.toggle('menu--hidden');
         //alert('444');
     };
+
+    function MenuClose(){
+        let menuCloseButton=document.querySelector('.header__middle-left-menuOpen--hidden');
+        if(menuCloseButton){
+            MenuOpenClose();
+        }
+    }
     /* function MenuClose(){
         alert('5557');
     }; */
@@ -57,23 +66,26 @@ export default function Header() {
                         </div>
                     </div> */}
                 </div>
-                
                 <div className="header__middle">
                     <div className="header__middle-left">
-                       {/*  <MenuButton/> */} 
-                        <div className='header__middle-left-menuOpen' onClick={MenuOpen}>
-                            <HeadersIcon icon_name='Menu'/>
-                        </div>
-                        <div className='header__middle-left-menuClose header__middle-left-menuClose--hidden' onClick={MenuOpen}>
-                            <HeadersIcon icon_name='Menu close'/>
-                        </div>
-                        <HeadersIcon icon_name='Search' link='/search'/>
+                       {/*  <MenuButton/> */}                        
+                        <HeadersIcon className='header__middle-left-menuOpen' 
+                                    icon_name='Menu' 
+                                    onClickFunc={MenuOpenClose} />                       
+                        
+                        <HeadersIcon className='header__middle-left-menuClose header__middle-left-menuClose--hidden' 
+                                    icon_name='Menu close'
+                                    onClickFunc={MenuOpenClose}/>
+                        
+                        <HeadersIcon icon_name='Search'
+                                    link='/search'
+                                    onClickFunc={MenuClose}/>
                         <HeadersIcon icon=''/>
                     </div>                   
 
                     <div className="header__middle-center">
                         <Link to='/'>
-                            <div className='header__logo'>
+                            <div className='header__logo' onClick={MenuClose}>
                                 <img src="./pictures/logo.svg" alt="" width="100px" height="100px" title='Шопери'/>
                             </div>
                         </Link>
@@ -85,8 +97,11 @@ export default function Header() {
                                                                                 'Login'} 
                                     link={      login_flag==='logined_man'?    '/logined_man' : 
                                                 login_flag==='logined_female'? '/logined_female':
-                                                                                '/login'}/>
-                        <HeadersIcon icon_name='Basket' link='/shopcart'/>
+                                                                                '/login'}
+                                    onClickFunc={MenuClose}/>
+                        <HeadersIcon icon_name='Basket' 
+                                    link='/shopcart'
+                                    onClickFunc={MenuClose}/>
                     </div>
                 </div>
 

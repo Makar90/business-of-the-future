@@ -1,0 +1,10 @@
+.menu{
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    z-index: 99;
+    background-color:red;
+    &--hidden{
+        display:none;
+    }
+}

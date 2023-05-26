@@ -1,4 +1,5 @@
 import { Routes, Route} from 'react-router-dom';
+import Menu from '../../components/Menu/Menu.jsx';
 
 import './main.scss';
 import Search from '../../pages/search/search';
@@ -10,6 +11,7 @@ import Shopers from '../../pages/Categories/shopers/Shopers';
 export default function Main(){
     return(
         <main>
+            <Menu/>
             <div className="container"> 
                 <Routes>
                     <Route path='/search' element={<Search />} />
