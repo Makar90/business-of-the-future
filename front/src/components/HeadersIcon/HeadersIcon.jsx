@@ -1,3 +1,4 @@
+import './headersIcon.scss';
 import {GetIconDataByName} from '../../data/icons.jsx';
 import { Link } from 'react-router-dom';
 
@@ -9,8 +10,7 @@ export default function HeadersIcon(props){
     if(icon_name!==''){
         return(
             <Link to={link}>
-                <div className="header__middle-right-login
-                                header__icon" 
+                <div className="icon" /* header__middle-right-login header__icon */
                         title={icon_data.name.en}>                       
                     {icon_data.icon}
                 </div>
@@ -18,8 +18,7 @@ export default function HeadersIcon(props){
         
     }else{
         return(
-            <div className="header__middle-right-login
-                            header__icon header__icon--null">                        
+            <div className="icon icon--null">{/* header__middle-right-login header__icon header__icon--null    */}               
                     <svg></svg>
             </div>)            
     }

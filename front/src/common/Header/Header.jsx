@@ -2,6 +2,7 @@
 import './header.scss';
 import { Link } from 'react-router-dom';
 import HeadersIcon from '../../components/HeadersIcon/HeadersIcon.jsx';
+//import MenuButton from '../../components/MenuButton/MenuButton.jsx';
 
 
 export default function Header() {
@@ -47,7 +48,8 @@ export default function Header() {
                 </div>
                 
                 <div className="header__middle">
-                    <div className="header__middle-left"> 
+                    <div className="header__middle-left">
+                       {/*  <MenuButton/> */} 
                         <HeadersIcon icon_name='Search' link='/search'/>
                         <HeadersIcon icon=''/>
                     </div>                   
@@ -71,8 +73,8 @@ export default function Header() {
                     </div>
                 </div>
 
-                {/* <div className="header__buttom">
-                    <Menu/>
+                {/* <div className="header__menu-buttom">
+                    
                 </div> */}
 
             </div>

@@ -1,6 +1,6 @@
-import './menu.css';
+import './menu.scss';
 
-export default function Menu (){
+/* export default function Menu (){
     return(
         <nav className="menu">
             <ul>
@@ -10,4 +10,4 @@ export default function Menu (){
             </ul>
         </nav>
     );
-}
+} */

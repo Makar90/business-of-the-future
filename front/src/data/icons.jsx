@@ -81,5 +81,32 @@ export const header_icons_svg=[
                 <circle cx="9" cy="20" r="1" fill="currentcolor"/>
             </svg>,
     },
+    
+/*     {
+        name:{
+            en:'Menu',
+            ua:'',
+        },
+        icon:
+        <svg viewBox="0 0 32 32" enable-background="new 0 0 32 32" id="Editable-line" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <line fill="none" id="XMLID_103_" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" x1="7" x2="25" y1="16" y2="16"/>
+            <line fill="none" id="XMLID_102_" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" x1="7" x2="25" y1="25" y2="25"/>
+            <line fill="none" id="XMLID_101_" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" x1="7" x2="25" y1="7" y2="7"/>
+        </svg>,
+    },
+
+    {
+        name:{
+            en:'Menu close',
+            ua:'',
+        },
+        icon:
+        <svg width="800px" height="800px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" id="Filled_Line" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <line fill="none" id="XMLID_840_" stroke="#200F60" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" x1="16" x2="16" y1="7" y2="25"/>
+            <line fill="none" id="XMLID_839_" stroke="#200F60" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" x1="7" x2="7" y1="7" y2="25"/>
+            <line fill="none" id="XMLID_838_" stroke="#200F60" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" x1="25" x2="25" y1="7" y2="25"/>
+        </svg>,
+    },   */
+
 ]
 
