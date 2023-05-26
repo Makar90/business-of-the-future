@@ -16,7 +16,7 @@ export default function Header() {
         //alert('444');
     };
     function MenuClose(){
-        alert('555');
+        alert('5557');
     };
 
     return(
