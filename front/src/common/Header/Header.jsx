@@ -15,9 +15,9 @@ export default function Header() {
         menuClose.classList.toggle('header__middle-left-menuClose--hidden');
         //alert('444');
     };
-    function MenuClose(){
+    /* function MenuClose(){
         alert('5557');
-    };
+    }; */
 
     return(
         <header className="header">
