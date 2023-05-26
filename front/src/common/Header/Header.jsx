@@ -24,9 +24,6 @@ export default function Header() {
             MenuOpenClose();
         }
     }
-    /* function MenuClose(){
-        alert('5557');
-    }; */
 
     return(
         <header className="header">
@@ -80,7 +77,8 @@ export default function Header() {
                         <HeadersIcon icon_name='Search'
                                     link='/search'
                                     onClickFunc={MenuClose}/>
-                        <HeadersIcon icon=''/>
+
+                        {/* <HeadersIcon icon=''/> */}
                     </div>                   
 
                     <div className="header__middle-center">
