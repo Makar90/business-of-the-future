@@ -1,27 +1,11 @@
 //import Menu from '../Menu/Menu';
 import './header.scss';
-import {header_icons_svg} from '../../data/icons';
 import { Link } from 'react-router-dom';
 import HeadersIcon from '../../components/HeadersIcon/HeadersIcon.jsx';
 
 
 export default function Header() {
-
-    function Get_Login_Icon(login_flag){
-        let icon;
-        switch (login_flag){
-            case ('logined_female'): 
-                icon= header_icons_svg.logined_female;
-                break;
-            case ('logined_man'): 
-                icon= header_icons_svg.logined_man;
-                break;
-            default:
-                icon= header_icons_svg.login;
-                break;
-        }
-        return icon;
-    }
+    let login_flag1='false'; // logined_man logined_female
 
     return(
         <header className="header">
@@ -63,21 +47,9 @@ export default function Header() {
                 </div>
                 
                 <div className="header__middle">
-                    <div className="header__middle-left">                         
-                        {/* <Headericon icon_name="Search" route_link="/search"/>
-                        <Headericon icon_name=""/>  */}
-                        <Link to='/search'>
-                            <div className="header__middle-right-login
-                                            header__icon">                        
-                                {header_icons_svg.search}
-                            </div>
-                        </Link>
-                        <HeadersIcon icon={header_icons_svg.search} link='/search'/>
+                    <div className="header__middle-left"> 
+                        <HeadersIcon icon_name='Search' link='/search'/>
                         <HeadersIcon icon=''/>
-                        <div className="header__middle-right-login
-                                            header__icon header__icon--null">                        
-                                <svg></svg>
-                        </div>
                     </div>                   
 
                     <div className="header__middle-center">
@@ -89,31 +61,13 @@ export default function Header() {
                     </div>
                     
                     <div className="header__middle-right">
-                        <Link to='/login'>
-                            <div className="header__middle-right-login
-                                            header__icon" 
-                                title="Залогінитись">                        
-                                {Get_Login_Icon('login')}
-                            </div>
-                        </Link>
-                        <Link to='/shopcart'>
-                            <div className="header__middle-right-login
-                                            header__icon">                        
-                                {header_icons_svg.basket}
-                            </div>
-                        </Link>
-
-
-
-                        {/* <div className="header__middle-right-login
-                                        header__icon">                        
-                            {header_icons_svg.logined_female}
-                        </div>                       
-
-                        <div className="header__middle-right-login
-                                        header__icon">                        
-                            {header_icons_svg.basket}
-                        </div> */}
+                        <HeadersIcon icon_name={login_flag1==='logined_man'?    'Logined_man' : 
+                                                login_flag1==='logined_female'? 'Logined_female':
+                                                                                'Login'} 
+                                    link={      login_flag1==='logined_man'?    '/logined_man' : 
+                                                login_flag1==='logined_female'? '/logined_female':
+                                                                                '/login'}/>
+                        <HeadersIcon icon_name='Basket' link='/shopcart'/>
                     </div>
                 </div>
 

@@ -1,15 +1,18 @@
-//import {header_icons_svg} from '../../data/icons.jsx';
+import {GetIconDataByName} from '../../data/icons.jsx';
 import { Link } from 'react-router-dom';
 
 export default function HeadersIcon(props){
-    let icon=props.icon;
     let link=props.link;
-    if(icon!==''){
+    let icon_name=props.icon_name;
+    let icon_data = GetIconDataByName(icon_name);
+    console.log(icon_data);
+    if(icon_name!==''){
         return(
             <Link to={link}>
                 <div className="header__middle-right-login
-                                header__icon">                        
-                    {icon}
+                                header__icon" 
+                        title={icon_data.name.en}>                       
+                    {icon_data.icon}
                 </div>
             </Link>)
         
