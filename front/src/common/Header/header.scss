@@ -10,6 +10,16 @@
         align-items: center;
         &-left{
             display: flex;
+            &-menuOpen{
+                &--hidden{
+                    display: none;
+                }
+            }
+            &-menuClose{
+                &--hidden{
+                    display: none;
+                }
+        }
         }
         &-center{
             

@@ -6,7 +6,18 @@ import HeadersIcon from '../../components/HeadersIcon/HeadersIcon.jsx';
 
 
 export default function Header() {
-    let login_flag1='false'; // logined_man logined_female
+    let login_flag='false'; // logined_man logined_female
+
+    function MenuOpen(){
+        let menuOpen=document.querySelector('.header__middle-left-menuOpen');
+        let menuClose=document.querySelector('.header__middle-left-menuClose');
+        menuOpen.classList.toggle('header__middle-left-menuOpen--hidden');
+        menuClose.classList.toggle('header__middle-left-menuClose--hidden');
+        //alert('444');
+    };
+    function MenuClose(){
+        alert('555');
+    };
 
     return(
         <header className="header">
@@ -50,6 +61,12 @@ export default function Header() {
                 <div className="header__middle">
                     <div className="header__middle-left">
                        {/*  <MenuButton/> */} 
+                        <div className='header__middle-left-menuOpen' onClick={MenuOpen}>
+                            <HeadersIcon icon_name='Menu'/>
+                        </div>
+                        <div className='header__middle-left-menuClose header__middle-left-menuClose--hidden' onClick={MenuOpen}>
+                            <HeadersIcon icon_name='Menu close'/>
+                        </div>
                         <HeadersIcon icon_name='Search' link='/search'/>
                         <HeadersIcon icon=''/>
                     </div>                   
@@ -63,11 +80,11 @@ export default function Header() {
                     </div>
                     
                     <div className="header__middle-right">
-                        <HeadersIcon icon_name={login_flag1==='logined_man'?    'Logined_man' : 
-                                                login_flag1==='logined_female'? 'Logined_female':
+                        <HeadersIcon icon_name={login_flag==='logined_man'?    'Logined_man' : 
+                                                login_flag==='logined_female'? 'Logined_female':
                                                                                 'Login'} 
-                                    link={      login_flag1==='logined_man'?    '/logined_man' : 
-                                                login_flag1==='logined_female'? '/logined_female':
+                                    link={      login_flag==='logined_man'?    '/logined_man' : 
+                                                login_flag==='logined_female'? '/logined_female':
                                                                                 '/login'}/>
                         <HeadersIcon icon_name='Basket' link='/shopcart'/>
                     </div>
@@ -80,4 +97,4 @@ export default function Header() {
             </div>
         </header>
     )
-}
+};
