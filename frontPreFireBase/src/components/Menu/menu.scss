@@ -1,0 +1,14 @@
+.menu{
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    z-index: 99;
+    background-color:aquamarine;
+    &--hidden{
+        display:none;
+    }
+}
+
+.menu .container{
+    background-color:aquamarine;
+}
