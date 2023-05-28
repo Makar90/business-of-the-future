@@ -1,6 +1,5 @@
-import {Registrate} from '../../components/Registrate/Registrate.jsx';
+//import {Registrate} from '../../components/Registrate/Registrate.jsx';
 import { Link } from 'react-router-dom';
-
 export default function Auth(){
     return(
         <>
@@ -8,7 +7,7 @@ export default function Auth(){
                 Registrate
             </h2>
 
-            <Registrate/>
+            {/* <Registrate/> */}
             <p>Вже зараєстровані? <Link to='/login'>Залогінитись</Link></p>
         </>
     )

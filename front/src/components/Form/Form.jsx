@@ -1,4 +1,4 @@
-import { useState } from "react";
+/* import { useState } from "react";
 
 const Form = ({handleTitle, handleFunk}) =>{
     const[email, setEmail] = useState('');
@@ -29,4 +29,4 @@ const Form = ({handleTitle, handleFunk}) =>{
     )
 };
 
-export {Form}
+export {Form} */

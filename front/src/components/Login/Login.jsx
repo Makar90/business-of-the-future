@@ -1,4 +1,4 @@
-import {Form} from '../Form/Form.jsx';
+/* import {Form} from '../Form/Form.jsx';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 //import {useDispatch} from 'react-redux';
 //import {setUser} from '......store/slices/userSlices';
@@ -11,16 +11,6 @@ const Login= () => {
         signInWithEmailAndPassword(auth, email, password)
             .then (console.log)
             .catch (console.error)
-            
-            /* .then((userCredential) => {
-                // Signed in 
-                const user = userCredential.user;
-                // ...
-            })
-              .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-            }); */
     };
 
     return(
@@ -31,4 +21,4 @@ const Login= () => {
     )
 }
 
-export {Login};
+export {Login}; */
