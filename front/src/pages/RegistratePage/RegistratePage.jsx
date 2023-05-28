@@ -1,6 +1,6 @@
 import {Registrate} from '../../components/Registrate/Registrate.jsx';
 import { Link } from 'react-router-dom';
-export default function Auth(){
+export default function RegistratePage(){
     return(
         <>
             <h2>
