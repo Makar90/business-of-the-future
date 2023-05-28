@@ -1,7 +1,8 @@
 
 
-//npm install react-router-dom
-//npm install firebase
+// npm install react-router-dom
+// npm install sass
+// npm install firebase
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';

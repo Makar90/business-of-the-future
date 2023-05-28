@@ -2,10 +2,11 @@ import { Routes, Route} from 'react-router-dom';
 import Menu from '../../components/Menu/Menu.jsx';
 
 import './main.scss';
-import Search from '../../pages/search/search';
-import Login from '../../pages/login/Login';
-import ShopCart from '../../pages/shopcart/ShopCart';
-//import Home from '../../pages/home/Home';
+import Search from '../../pages/Search/search.jsx';
+import LoginPage from '../../pages/LoginPage/LoginPage.jsx';
+import RegistratePage from '../../pages/RegistratePage/RegistratePage.jsx';
+import ShopCart from '../../pages/ShopCart/ShopCart.jsx';
+//import Home from '../../pages/Home/Home';
 import Shopers from '../../pages/Categories/shopers/Shopers';
 
 export default function Main(){
@@ -15,7 +16,8 @@ export default function Main(){
             <div className="container"> 
                 <Routes>
                     <Route path='/search' element={<Search />} />
-                    <Route path='/login' element={<Login />} />
+                    <Route path='/login' element={<LoginPage />} />
+                    <Route path='/registrate' element={<RegistratePage />} />
                     <Route path='/shopcart' element={<ShopCart />} />
                     {/* <Route path='/' element={<Home />} /> */}
                     <Route path='/' element={<Shopers />} />

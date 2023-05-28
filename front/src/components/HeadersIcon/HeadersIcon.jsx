@@ -7,7 +7,7 @@ export default function HeadersIcon(props){
     let icon_name=props.icon_name;
     let onClickFunc=props.onClickFunc;
     let icon_data = GetIconDataByName(icon_name);
-    console.log(icon_data);
+    //console.log(icon_data);
     if(icon_name!==''){
         return(
             <Link className={props.className} to={link} onClick={onClickFunc}>

@@ -88,10 +88,10 @@ export const header_icons_svg=[
             ua:'',
         },
         icon:
-        <svg viewBox="0 0 32 32" enable-background="new 0 0 32 32" id="Editable-line" version="1.1" stroke-width="1">
-            <line fill="none" id="XMLID_103_" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="7" x2="25" y1="16" y2="16"/>
-            <line fill="none" id="XMLID_102_" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="7" x2="25" y1="25" y2="25"/>
-            <line fill="none" id="XMLID_101_" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="7" x2="25" y1="7" y2="7"/>
+        <svg viewBox="0 0 32 32" enableBackground="new 0 0 32 32" id="Editable-line" version="1.1" strokeWidth="1">
+            <line fill="none" id="XMLID_103_" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" x1="7" x2="25" y1="16" y2="16"/>
+            <line fill="none" id="XMLID_102_" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" x1="7" x2="25" y1="25" y2="25"/>
+            <line fill="none" id="XMLID_101_" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" x1="7" x2="25" y1="7" y2="7"/>
         </svg>,
     },
 
@@ -101,10 +101,10 @@ export const header_icons_svg=[
             ua:'',
         },
         icon:
-        <svg width="800px" height="800px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" id="Filled_Line" version="1.1" stroke-width="2">
-            <line fill="none" id="XMLID_840_" stroke="orange" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="16" x2="16" y1="7" y2="25"/>
-            <line fill="none" id="XMLID_839_" stroke="orange" /* stroke="#200F60" */ stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="7" x2="7" y1="7" y2="25"/>
-            <line fill="none" id="XMLID_838_" stroke="orange" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="25" x2="25" y1="7" y2="25"/>
+        <svg width="800px" height="800px" viewBox="0 0 32 32" enableBackground="new 0 0 32 32" id="Filled_Line" version="1.1" strokeWidth="2">
+            <line fill="none" id="XMLID_840_" stroke="orange" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" x1="16" x2="16" y1="7" y2="25"/>
+            <line fill="none" id="XMLID_839_" stroke="orange" /* stroke="#200F60" */ strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" x1="7" x2="7" y1="7" y2="25"/>
+            <line fill="none" id="XMLID_838_" stroke="orange" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" x1="25" x2="25" y1="7" y2="25"/>
         </svg>,
     },   
 
