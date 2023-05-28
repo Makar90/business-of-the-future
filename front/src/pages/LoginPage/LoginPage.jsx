@@ -1,5 +1,5 @@
-import {Login} from '../../components/Login/Login.jsx';
-import { Link } from 'react-router-dom';
+//import {Login} from '../../components/Login/Login.jsx';
+//import { Link } from 'react-router-dom';
 
 export default function Auth(){
     return(
@@ -8,8 +8,8 @@ export default function Auth(){
                 Login
             </h2>
 
-            <Login/>
-            <p>Ще незареєстровані? <Link to='/registrate'>Зареєструватись</Link></p>
+          {/*   <Login/> */}
+            {/* <p>Ще незареєстровані? <Link to='/registrate'>Зареєструватись</Link></p> */}
         </>
     )
 }
