@@ -1,4 +1,4 @@
-//import {Login} from '../../components/Login/Login.jsx';
+import {Login} from '../../components/Login/Login.jsx';
 import { Link } from 'react-router-dom';
 
 export default function Auth(){
@@ -8,7 +8,7 @@ export default function Auth(){
                 Login
             </h2>
 
-          {/*   <Login/> */}
+            <Login/> 
             <p>Ще незареєстровані? <Link to='/registrate'>Зареєструватись</Link></p> 
         </>
     )
