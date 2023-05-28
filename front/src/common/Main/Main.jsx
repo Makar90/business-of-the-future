@@ -19,7 +19,7 @@ export default function Main(){
                     <Route path='/login' element={<LoginPage />} />
                     <Route path='/registrate' element={<RegistratePage />} /> 
                     <Route path='/shopcart' element={<ShopCart />} />
-                    {/* <Route path='/' element={<Home />} /> */}
+                    {/* <Route path='/' element={<Home />} />  */}
                     <Route path='/' element={<Shopers />} />
                     <Route path='/shopers' element={<Shopers />} />
                 </Routes>
