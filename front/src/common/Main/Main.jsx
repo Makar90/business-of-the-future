@@ -2,7 +2,7 @@ import { Routes, Route} from 'react-router-dom';
 import Menu from '../../components/Menu/Menu.jsx';
 
 import './main.scss';
-import Search from '../../pages/search/search.jsx';
+import Search from '../../pages/search/Search.jsx';
 import LoginPage from '../../pages/LoginPage/LoginPage.jsx';
 import RegistratePage from '../../pages/RegistratePage/RegistratePage.jsx';
 import ShopCart from '../../pages/shopcart/ShopCart.jsx';
