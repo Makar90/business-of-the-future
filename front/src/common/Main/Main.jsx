@@ -15,7 +15,7 @@ export default function Main(){
             <Menu/>
             <div className="container"> 
                 <Routes>
-                    <Route path='/search' element={<Search />} /> 
+                    <Route path='/searche' element={<Search />} /> 
                     <Route path='/login' element={<LoginPage />} />
                     <Route path='/registrate' element={<RegistratePage />} /> 
                     <Route path='/shopcart' element={<ShopCart />} />
