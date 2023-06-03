@@ -8,6 +8,7 @@ const Registrate= () => {
     //const dispatch = useDispatch();
 
     const navigate= useNavigate();
+    console.log(navigate);
 
     const handleRegistrateFunc = (email, password) =>{
         const auth = getAuth();
@@ -15,9 +16,15 @@ const Registrate= () => {
             //.then (console.log)
             .then (({user}) => {
                 console.log(user);
-                navigate ('/login');
+                console.log(user.email);
+                //navigate ('/login');
             })
-            .catch (console.error)
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorCode);
+                console.log(errorMessage);
+            });
     };
 
     return(
