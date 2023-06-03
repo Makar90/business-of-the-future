@@ -10,6 +10,7 @@ export default function AccountPage(){
         signOut(auth).then(() => {
             // Sign-out successful.
             navigate ('/');
+            window.location.reload(false);
         }).catch((error) => {
             // An error happened.
         });
@@ -38,10 +39,12 @@ export default function AccountPage(){
     return(
         <div className="container">
             <h2>Account</h2>
-            <button onClick={userSingOut}>
-                Sing out
-            </button>
-            <p className='user'></p>
+            <form action="">
+                <button onClick={userSingOut}>
+                    Sing out
+                </button>
+                <p className='user'></p>
+            </form>
         </div>
     )
 }
