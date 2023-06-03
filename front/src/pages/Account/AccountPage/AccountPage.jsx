@@ -1,14 +1,17 @@
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+import {useNavigate} from 'react-router-dom';
 //import Header from '../../../common/Header/Header.jsx';
 
 export default function AccountPage(){
+    const navigate= useNavigate();
 
     function userSingOut(){
         const auth = getAuth();
         signOut(auth).then(() => {
-        // Sign-out successful.
+            // Sign-out successful.
+            navigate ('/');
         }).catch((error) => {
-        // An error happened.
+            // An error happened.
         });
 
     }
