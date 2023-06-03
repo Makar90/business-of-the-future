@@ -23,10 +23,11 @@ export default function AccountPage(){
             // User is signed in, see docs for a list of available properties
             // https://firebase.google.com/docs/reference/js/auth.user
             const uid = user.uid;
-            console.log (uid);                
+            console.log (uid);    
+            console.log (user);             
             
             let userField=document.querySelector('.user');
-            userField.innerHTML=uid;
+            userField.innerHTML= user.email+'<br>'+user.uid;
             // ...
         } else {
             // User is signed out
