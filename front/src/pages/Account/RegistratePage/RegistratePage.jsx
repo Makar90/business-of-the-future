@@ -1,5 +1,5 @@
 
-import {Registrate} from '../../../components/Registrate/Registrate.jsx';
+import {Registrate} from '../../../components/Account/Registrate/Registrate.jsx';
 import { Link } from 'react-router-dom';
 export default function RegistratePage(){
     return(

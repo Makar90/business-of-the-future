@@ -1,4 +1,4 @@
-import {Form} from '../Account/Form/Form.jsx';
+import {Form} from '../Form/Form.jsx';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import {useNavigate} from 'react-router-dom';
 //import {useDispatch} from 'react-redux';
