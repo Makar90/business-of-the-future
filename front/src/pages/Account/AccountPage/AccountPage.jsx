@@ -10,7 +10,7 @@ export default function AccountPage(){
         signOut(auth).then(() => {
             // Sign-out successful.
             navigate ('/');
-            window.location.reload(false);
+            //window.location.reload(false);
         }).catch((error) => {
             // An error happened.
         });

@@ -12,13 +12,13 @@ import './main.scss';
 import './firebase.js';
 //import reportWebVitals from './reportWebVitals';
 
-let login_flag = 'false'; // logined_man logined_female
+/*let login_flag = 'false'; // logined_man logined_female
 export function changeLogin_flag(value) {
     login_flag = value;
 }
 export function getLogin_flag() {
     return login_flag;
-}
+}*/
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

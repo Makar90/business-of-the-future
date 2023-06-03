@@ -23,6 +23,7 @@ const Registrate= () => {
                         // Email verification sent!
                         // ...
                     });
+                navigate ('/');
             })
             .catch((error) => {
                 const errorCode = error.code;

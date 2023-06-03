@@ -6,42 +6,37 @@ import HeadersIcon from '../../components/HeadersIcon/HeadersIcon.jsx';
 
 import { useState } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import {changeLogin_flag, getLogin_flag} from '../../index.js';
+//import {changeLogin_flag, getLogin_flag} from '../../index.js';
 
 export default function Header() {
     //let login_flag='false'; // logined_man logined_female
-    let login_flag=getLogin_flag();
-    const[userInfo, setUserInfo] = useState('');
+    //let login_flag=getLogin_flag();
+    const[userLogin, setUserLogin] = useState('false');
 
     function RenderAcciuntIco(){
         const auth = getAuth();
         onAuthStateChanged(auth, (user) => {
-            if (user && !userInfo) {
-                // User is signed in, see docs for a list of available properties
-                // https://firebase.google.com/docs/reference/js/auth.user
-                //const uid = user.uid;
-                //console.log (uid);                
-
-                changeLogin_flag('logined_man');
-                console.log(login_flag);
-                setUserInfo(user.uid); 
+            if (user && userLogin /*!userInfo*/) {               
+                //changeLogin_flag('logined_man');
+                //console.log(login_flag);
+                setUserLogin('logined_man');
                 // ...
             } else {
-                // User is signed out
-                // ...
-                changeLogin_flag('false');
-                console.log(login_flag);
+                //changeLogin_flag('false');
+                setUserLogin('false');
+                //console.log(login_flag);
             }
         }); 
     }
 
-    function UpdateAccountIcon(){
+    /*function UpdateAccountIcon(){
         setTimeout( ()=>{
             RenderAcciuntIco();
             console.log('timeout');
-        }, 500 );
+        }, 0 );
     }
-    UpdateAccountIcon();
+    UpdateAccountIcon();*/
+    RenderAcciuntIco();
 
 
     
@@ -130,11 +125,11 @@ export default function Header() {
                     
                     <div className="header__middle-right">
                         {/* {accIco} */}
-                        <HeadersIcon icon_name={login_flag==='logined_man'?    'Logined_man' : 
-                                                login_flag==='logined_female'? 'Logined_female':
+                        <HeadersIcon icon_name={userLogin==='logined_man'?    'Logined_man' : 
+                                                userLogin==='logined_female'? 'Logined_female':
                                                                                 'Login'} 
-                                    link={      login_flag==='logined_man'?    '/account' : 
-                                                login_flag==='logined_female'? '/account':
+                                    link={      userLogin==='logined_man'?    '/account' : 
+                                                userLogin==='logined_female'? '/account':
                                                                                 '/login'}
                                     onClickFunc={MenuClose}/>
                         <HeadersIcon icon_name='Basket' 

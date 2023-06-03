@@ -31,9 +31,10 @@ export default function Auth(){
              //.catch (() => alert('invalid user'))
              .catch ((Error)=>{
                 //alert(Error);
-                console.log(Error);
+                console.log(Error.code);
+                console.log(Error.message);
                 let errorField=document.querySelector('.error');
-                errorField.innerHTML=Error
+                errorField.innerHTML=Error.code
                 //errorField.innerHTML=Error.split(':')[3];
             })
      };
@@ -48,7 +49,6 @@ export default function Auth(){
                 console.log (uid);
                 let userField=document.querySelector('.user');
                 userField.innerHTML=uid;
-                //console.log (user);
                 // ...
             } else {
                 // User is signed out
