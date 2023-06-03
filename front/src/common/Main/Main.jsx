@@ -5,7 +5,7 @@ import './main.scss';
 import SearchPage from '../../pages/SearchPage/SearchPage.jsx'
 import LoginPage from '../../pages/Account/LoginPage/LoginPage.jsx';
 import RegistratePage from '../../pages/Account/RegistratePage/RegistratePage.jsx';
-import ShopCart from '../../pages/shopcart/ShopCart.jsx';
+import ShopCard from '../../pages/ShopCard/ShopCard.jsx';
 //import Home from '../../pages/Home/Home';
 import Shopers from '../../pages/Categories/shopers/Shopers';
 
@@ -18,7 +18,7 @@ export default function Main(){
                     <Route path='/search' element={<SearchPage />} /> 
                     <Route path='/login' element={<LoginPage />} />
                     <Route path='/registrate' element={<RegistratePage />} /> 
-                    <Route path='/shopcart' element={<ShopCart />} />
+                    <Route path='/shopcart' element={<ShopCard />} />
                     {/* <Route path='/' element={<Home />} />  */}
                     <Route path='/' element={<Shopers />} />
                     <Route path='/shopers' element={<Shopers />} />
