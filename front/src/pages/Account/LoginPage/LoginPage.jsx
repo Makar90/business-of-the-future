@@ -11,6 +11,7 @@ import {useNavigate} from 'react-router-dom';
 import './loginPage.scss';
 
 import {onAuthStateChanged } from "firebase/auth";
+import { signOut } from "firebase/auth";
 
 export default function Auth(){
 
@@ -56,6 +57,15 @@ export default function Auth(){
         });
     }
 
+    function userSingOut(){
+        const auth = getAuth();
+        signOut(auth).then(() => {
+        // Sign-out successful.
+        }).catch((error) => {
+        // An error happened.
+        });
+    }
+
 
     return(
         <div className="container loginPage__container"> 
@@ -68,7 +78,12 @@ export default function Auth(){
                 handleTitle='Login'
                 handleFunk={handleLoginFunc}
             />
-            <p>Ще незареєстровані? <Link to='/registrate'>Зареєструватись</Link></p> 
+            <p>Ще незареєстровані? <Link to='/registrate'>Зареєструватись</Link></p>
+
+            <button onClick={userSingOut}>
+                Sing out
+            </button>
+
             <button onClick={getLogined}>
                 get user
             </button>
