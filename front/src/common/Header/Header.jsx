@@ -4,9 +4,49 @@ import { Link } from 'react-router-dom';
 import HeadersIcon from '../../components/HeadersIcon/HeadersIcon.jsx';
 //import MenuButton from '../../components/MenuButton/MenuButton.jsx';
 
+import { useState } from "react";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import {changeLogin_flag, getLogin_flag} from '../../index.js';
 
 export default function Header() {
-    let login_flag='false'; // logined_man logined_female
+    //let login_flag='false'; // logined_man logined_female
+    let login_flag=getLogin_flag();
+    const[userInfo, setUserInfo] = useState('');
+
+    function RenderAcciuntIco(){
+        const auth = getAuth();
+        onAuthStateChanged(auth, (user) => {
+            if (user && !userInfo) {
+                // User is signed in, see docs for a list of available properties
+                // https://firebase.google.com/docs/reference/js/auth.user
+                //const uid = user.uid;
+                //console.log (uid);                
+
+                changeLogin_flag('logined_man');
+                console.log(login_flag);
+                setUserInfo(user.uid); 
+                // ...
+            } else {
+                // User is signed out
+                // ...
+                changeLogin_flag('false');
+                console.log(login_flag);
+            }
+        }); 
+    }
+
+    function UpdateAccountIcon(){
+        setTimeout( ()=>{
+            RenderAcciuntIco();
+            console.log('timeout');
+        }, 500 );
+    }
+    UpdateAccountIcon();
+
+
+    
+    
+
 
     function MenuOpenClose(){
         let menuOpenButton=document.querySelector('.header__middle-left-menuOpen');
@@ -24,7 +64,6 @@ export default function Header() {
             MenuOpenClose();
         }
     }
-
     return(
         <header className="header">
             <div className="container header__container">
@@ -90,11 +129,12 @@ export default function Header() {
                     </div>
                     
                     <div className="header__middle-right">
+                        {/* {accIco} */}
                         <HeadersIcon icon_name={login_flag==='logined_man'?    'Logined_man' : 
                                                 login_flag==='logined_female'? 'Logined_female':
                                                                                 'Login'} 
-                                    link={      login_flag==='logined_man'?    '/logined_man' : 
-                                                login_flag==='logined_female'? '/logined_female':
+                                    link={      login_flag==='logined_man'?    '/account' : 
+                                                login_flag==='logined_female'? '/account':
                                                                                 '/login'}
                                     onClickFunc={MenuClose}/>
                         <HeadersIcon icon_name='Basket' 
