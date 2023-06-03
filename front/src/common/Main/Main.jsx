@@ -3,7 +3,7 @@ import Menu from '../../components/Menu/Menu.jsx';
 
 import './main.scss';
 import Search from '../../pages/search/search.jsx';
-import LoginPage from '../../pages/LoginPage/LoginPage.jsx';
+import LoginPage from '../../pages/Account/LoginPage/LoginPage.jsx';
 import RegistratePage from '../../pages/Account/RegistratePage/RegistratePage.jsx';
 import ShopCart from '../../pages/shopcart/ShopCart.jsx';
 //import Home from '../../pages/Home/Home';

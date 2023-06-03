@@ -1,4 +1,4 @@
-import {Login} from '../../components/Login/Login.jsx';
+import {Login} from '../../../components/Login/Login.jsx';
 import { Link } from 'react-router-dom';
 
 export default function Auth(){
