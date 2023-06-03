@@ -7,7 +7,7 @@ import LoginPage from '../../pages/Account/LoginPage/LoginPage.jsx';
 import RegistratePage from '../../pages/Account/RegistratePage/RegistratePage.jsx';
 import ShopCard from '../../pages/GoodsCards/ShopCard/ShopCard.jsx';
 //import Home from '../../pages/Home/Home';
-import Shopers from '../../pages/GoodsRow/shopers/Shopers.jsx';
+import Shopers from '../../pages/GoodsRow/Shopers/Shopers.jsx';
 
 export default function Main(){
     return(
