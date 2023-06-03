@@ -2,8 +2,8 @@
 
 export default function Shopers(){
     return(
-        <>
-        <h2>Shopers</h2>
-        </>
+        <div className="container"> 
+            <h2>Shopers</h2>
+        </div>
     )
 }

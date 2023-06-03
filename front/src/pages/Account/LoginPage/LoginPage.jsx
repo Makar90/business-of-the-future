@@ -8,6 +8,7 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import {useNavigate} from 'react-router-dom';
 //import {useDispatch} from 'react-redux';
 //import {setUser} from '......store/slices/userSlices';
+import './loginPage.scss';
 
 export default function Auth(){
 
@@ -28,7 +29,7 @@ export default function Auth(){
              .catch ((Error)=>{alert(Error)})
      };
     return(
-        <>
+        <div className="container loginPage__container"> 
             <h2>
                 Login
             </h2>
@@ -39,6 +40,6 @@ export default function Auth(){
                 handleFunk={handleLoginFunc}
             />
             <p>Ще незареєстровані? <Link to='/registrate'>Зареєструватись</Link></p> 
-        </>
+        </div>
     )
 }

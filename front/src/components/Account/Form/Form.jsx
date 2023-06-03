@@ -1,11 +1,12 @@
 import { useState } from "react";
+import './form.scss';
 
 const Form = ({handleTitle, handleFunk}) =>{
     const[email, setEmail] = useState('');
     const[pass, setPass]=useState('');
 
     return(
-        <div>
+        <div className="form">
             <input
                 type='email'
                 value={email}

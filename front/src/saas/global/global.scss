@@ -10,7 +10,6 @@
     padding: 5px;
     //max-width: 600px;
     border: 1px solid black;
-
     @media (max-width:$mobile_small) {
         background-color: red;
         min-width: $mobile_small;

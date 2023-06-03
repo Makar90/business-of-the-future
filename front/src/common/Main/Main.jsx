@@ -13,7 +13,7 @@ export default function Main(){
     return(
         <main>
             <Menu/>
-            <div className="container"> 
+            {/* <div className="container">  */}
                 <Routes>
                     <Route path='/search' element={<SearchPage />} /> 
                     <Route path='/login' element={<LoginPage />} />
@@ -23,7 +23,7 @@ export default function Main(){
                     <Route path='/' element={<Shopers />} />
                     <Route path='/shopers' element={<Shopers />} />
                 </Routes>
-            </div>            
+            {/* </div>  */}           
         </main>
     )
 }
