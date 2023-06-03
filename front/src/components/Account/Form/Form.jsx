@@ -20,12 +20,10 @@ const Form = ({handleTitle, handleFunk}) =>{
                 placeholder = 'pass'
             />
 
-            <button
-                onClick = {() => handleFunk(email, pass)}>
+            <button onClick = {() => handleFunk(email, pass)}>
                 {handleTitle}
             </button>
-        </div>
-        
+        </div>        
     )
 };
 
