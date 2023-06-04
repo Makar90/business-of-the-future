@@ -13,6 +13,8 @@ import './loginPage.scss';
 import {onAuthStateChanged } from "firebase/auth";
 import { signOut } from "firebase/auth";
 
+import { createUser_LocalStorage, getUser_LocalStorage } from '../../../data/usersLocalStorage.jsx';
+
 export default function Auth(){
 
      //const dispatch = useDispatch();
@@ -24,17 +26,22 @@ export default function Auth(){
          signInWithEmailAndPassword(auth, email, password)
              //.then (console.log)
              .then (({user}) => {
-                 console.log(user);
-                 navigate ('/');
+                createUser_LocalStorage(user);
+                navigate ('/account');
+                document.querySelector('.loginPage__user').innerHTML = getUser_LocalStorage().user.email;                 
              })
              //.catch (console.error)
              //.catch (() => alert('invalid user'))
              .catch ((Error)=>{
                 //alert(Error);
-                console.log(Error.code);
-                console.log(Error.message);
-                let errorField=document.querySelector('.error');
-                errorField.innerHTML=Error.code
+                //console.log(Error.code);
+                //console.log(Error.message);
+                if(Error.code && Error.message){
+                    document.querySelector('.loginPage__message').innerHTML = //Error.code + '<br>'+ 
+                                                                        Error.code.split('/')[1] + '<br>' +
+                                                                        Error.message;
+                }
+                                                                        
                 //errorField.innerHTML=Error.split(':')[3];
             })
      };
@@ -69,7 +76,7 @@ export default function Auth(){
 
     return(
         <div className="container loginPage__container"> 
-            <h2>
+            <h2 className='loginPage__title'>
                 Login
             </h2>
 
@@ -78,7 +85,9 @@ export default function Auth(){
                 handleTitle='Login'
                 handleFunk={handleLoginFunc}
             />
-            <p>Ще незареєстровані? <Link to='/registrate'>Зареєструватись</Link></p>
+            <p className='loginPage__registrate'>Ще незареєстровані? <Link to='/registrate'>Зареєструватись</Link></p>
+
+            <p className='loginPage__message'></p>
 
             <button onClick={userSingOut}>
                 Sing out
@@ -87,8 +96,7 @@ export default function Auth(){
             <button onClick={getLogined}>
                 get user
             </button>
-            <p className='error'></p>
-            <p className='user'></p>
+            
         </div>
     )
 }
