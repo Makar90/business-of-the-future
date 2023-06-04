@@ -1,5 +1,6 @@
 import { getAuth, /* onAuthStateChanged, */ signOut } from "firebase/auth";
 import {useNavigate} from 'react-router-dom';
+//import {LogOut} from '../../../components/Account/LogOut/LogOut.jsx';
 //import Header from '../../../common/Header/Header.jsx';
 
 import { getUser_LocalStorage, 
@@ -20,7 +21,6 @@ export default function AccountPage(){
         }).catch((error) => {
             // An error happened.
         });
-
     }
 
 /*     const auth = getAuth();
@@ -43,16 +43,19 @@ export default function AccountPage(){
         }
     }); */
     //console.log(getUser_LocalStorage())
-    function getUser_LocalStorage1(){
-    if(getUser_LocalStorage()){
-        document.querySelector('.account__userInfo').innerHTML = getUser_LocalStorage().user.email + '<br>'+
-                                                                    getUser_LocalStorage().user.uid + '<br>'+
-                                                                    getUser_LocalStorage().lastActivity + '<br>'+
-                                                                    getUser_LocalStorage().lastUpdate;
-    }else{
-        document.querySelector('.account__userInfo').innerHTML = "not login";
+
+    function getUserInfo(){
+        let user = getUser_LocalStorage();
+        if(user){
+            document.querySelector('.account__userInfo').innerHTML =    
+                user.user.email + '<br>'+
+                user.user.uid + '<br>'+
+                user.lastActivity + '<br>'+
+                user.lastUpdate;
+        }else{
+            document.querySelector('.account__userInfo').innerHTML = "not login";
+        }
     }
-}
 
     return(
         <div className="container">
@@ -62,7 +65,7 @@ export default function AccountPage(){
                     Sing out
                 </button>
 
-                <button onClick={getUser_LocalStorage1}>
+                <button onClick={getUserInfo}>
                     AuthStatus
                 </button>
                 

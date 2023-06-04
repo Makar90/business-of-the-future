@@ -4,10 +4,6 @@ let userDataKey_LocalStorage='user';
 let userLocalStoreUpdateTime = 1000*10//1000*60*60*4;
 
 
-function setUser_LocalStorage(userData_LocalStorage){
-    localStorage.setItem(userDataKey_LocalStorage,JSON.stringify(userData_LocalStorage));
-}
-
 export function createUser_LocalStorage(userLogin){
     //setUserLoginData(value);
     let userData_LocalStorage={
@@ -48,3 +44,6 @@ export function removeUser_LocalStorage(){
     localStorage.removeItem(userDataKey_LocalStorage);
 }
 
+function setUser_LocalStorage(userData_LocalStorage){
+    localStorage.setItem(userDataKey_LocalStorage,JSON.stringify(userData_LocalStorage));
+}
