@@ -1,33 +1,19 @@
-import { getAuth, /* onAuthStateChanged, */ signOut } from "firebase/auth";
 import {useNavigate} from 'react-router-dom';
-//import {LogOut} from '../../../components/Account/LogOut/LogOut.jsx';
-//import Header from '../../../common/Header/Header.jsx';
-
 import {LogOut} from '../../../components/Account/LogOut/LogOut.jsx';
 
 import { getUser_LocalStorage, 
-        removeUser_LocalStorage 
+        /* removeUser_LocalStorage  */
         } from "../../../data/usersLocalStorage";
 
 
 export default function AccountPage(){
     const navigate= useNavigate();
 
-    function userSingOut(){
-        const auth = getAuth();
-        signOut(auth).then(() => {
-            // Sign-out successful.
-            removeUser_LocalStorage();
-            navigate ('/');
-            //window.location.reload(false);
-        }).catch((error) => {
-            // An error happened.
-        });
-    }
-
-    /* function userSingOut2(){
+    function LoginOut(){
         LogOut();
-    } */
+        navigate ('/');
+        //window.location.reload(false);
+    }
 
 /*     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
@@ -66,20 +52,15 @@ export default function AccountPage(){
     return(
         <div className="container">
             <h2 className="account__title">Account</h2>
-            {/* <form action=""> */}
-                <button onClick={userSingOut}>
-                    Sing out
-                </button>
 
-                <button onClick={LogOut}>
+                <button onClick={LoginOut}>
                     Sing out2
                 </button>
 
                 <button onClick={getUserInfo}>
                     AuthStatus
                 </button>
-                
-            {/* </form> */}
+
             <p className='account__userInfo'></p>
         </div>
     )
