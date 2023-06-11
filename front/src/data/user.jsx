@@ -4,19 +4,52 @@ let userDataKey='user';
 //let userLocalStoreUpdateTime = 1000*10//1000*60*60*4;
 
 
-export function setUser(user){
+export function createUser(user, lastActivity, lastUpdate){
     //setUserLoginData(value);
     let userData={
         user: user,
-        lastActivity : Date.now(),
-        lastUpdate : Date.now(),        
+        lastActivity : lastActivity === undefined ? Date.now() : lastActivity,
+        lastUpdate : lastUpdate === undefined ? Date.now() : lastUpdate,        
     }
     localStorage.setItem(userDataKey,JSON.stringify(userData));
 }
 
+function checkUser(){
+    let userData = JSON.parse( localStorage.getItem(userDataKey));
+    if(userData){
+        return true;
+    }else{
+        return false;
+    }
+}
 
 export function removeUser(){
     localStorage.removeItem(userDataKey);
+}
+
+
+
+
+export function updateUser_lastActivity(){
+    if(!checkUser()){
+        console.log('-false-updateUser_lastActivity');
+        return false;
+    }
+    let userData = JSON.parse(localStorage.getItem(userDataKey));
+    userData.lastActivity = Date.now();
+    localStorage.setItem(userDataKey,JSON.stringify(userData));
+    console.log('---updateUser_lastActivity');
+}
+
+export function updateUser_lastUpdate(){
+    if(!checkUser()){
+        console.log('-false-updateUser_lastUpdate');
+        return false;
+    }
+    let userData = JSON.parse(localStorage.getItem(userDataKey));
+    userData.lastUpdate = Date.now();
+    localStorage.setItem(userDataKey,JSON.stringify(userData));
+    console.log('---updateUser_lastUpdate');
 }
 
 

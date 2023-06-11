@@ -1,9 +1,7 @@
 import {useNavigate} from 'react-router-dom';
 import {LogOut} from '../../../components/Account/LogOut/LogOut.jsx';
 
-import { getUser_LocalStorage, 
-        /* removeUser_LocalStorage  */
-        } from "../../../data/usersLocalStorage";
+import { getUser_LocalStorage} from "../../../data/usersLocalStorage";
 
 
 export default function AccountPage(){
