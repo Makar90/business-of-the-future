@@ -3,6 +3,8 @@ import {useNavigate} from 'react-router-dom';
 //import {LogOut} from '../../../components/Account/LogOut/LogOut.jsx';
 //import Header from '../../../common/Header/Header.jsx';
 
+import {LogOut} from '../../../components/Account/LogOut/LogOut.jsx';
+
 import { getUser_LocalStorage, 
         removeUser_LocalStorage 
         } from "../../../data/usersLocalStorage";
@@ -22,6 +24,10 @@ export default function AccountPage(){
             // An error happened.
         });
     }
+
+    /* function userSingOut2(){
+        LogOut();
+    } */
 
 /*     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
@@ -63,6 +69,10 @@ export default function AccountPage(){
             {/* <form action=""> */}
                 <button onClick={userSingOut}>
                     Sing out
+                </button>
+
+                <button onClick={LogOut}>
+                    Sing out2
                 </button>
 
                 <button onClick={getUserInfo}>

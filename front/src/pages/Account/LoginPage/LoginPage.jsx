@@ -10,10 +10,13 @@ import {useNavigate} from 'react-router-dom';
 //import {setUser} from '......store/slices/userSlices';
 import './loginPage.scss';
 
+
+
 import {onAuthStateChanged } from "firebase/auth";
 import { signOut } from "firebase/auth";
 
-import { createUser_LocalStorage, getUser_LocalStorage } from '../../../data/usersLocalStorage.jsx';
+import { /* createUser_LocalStorage, */ getUser_LocalStorage } from '../../../data/usersLocalStorage.jsx';
+import {setUser} from '../../../data/user.jsx';
 
 export default function Login(){
 
@@ -26,7 +29,8 @@ export default function Login(){
          signInWithEmailAndPassword(auth, email, password)
              //.then (console.log)
              .then (({user}) => {
-                createUser_LocalStorage(user);
+                //createUser_LocalStorage(user);
+                setUser(user);
                 navigate ('/account');
                 document.querySelector('.loginPage__user').innerHTML = getUser_LocalStorage().user.email;                 
              })
@@ -86,7 +90,6 @@ export default function Login(){
                 handleFunk={handleLoginFunc}
             />
             <p className='loginPage__registrate'>Ще незареєстровані? <Link to='/registrate'>Зареєструватись</Link></p>
-
             <p className='loginPage__message'></p>
 
             <button onClick={userSingOut}>
