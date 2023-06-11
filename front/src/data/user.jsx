@@ -32,25 +32,41 @@ export function removeUser(){
 
 export function updateUser_lastActivity(){
     if(!checkUser()){
-        console.log('-false-updateUser_lastActivity');
+        console.log('USER updateUser_lastActivity: error');
         return false;
     }
     let userData = JSON.parse(localStorage.getItem(userDataKey));
     userData.lastActivity = Date.now();
     localStorage.setItem(userDataKey,JSON.stringify(userData));
-    console.log('---updateUser_lastActivity');
+    console.log('USER updateUser_lastActivity: OK');
 }
 
 export function updateUser_lastUpdate(){
     if(!checkUser()){
-        console.log('-false-updateUser_lastUpdate');
+        console.log('updateUser_lastUpdate: error');
         return false;
     }
     let userData = JSON.parse(localStorage.getItem(userDataKey));
     userData.lastUpdate = Date.now();
     localStorage.setItem(userDataKey,JSON.stringify(userData));
-    console.log('---updateUser_lastUpdate');
+    console.log('USER updateUser_lastUpdate: OK');
 }
+
+export function getUser_sex(){
+    if(!checkUser()){
+        console.log('USER getUser_sex: error');
+        return false;
+    } else {
+        /* let userData = JSON.parse(localStorage.getItem(userDataKey));
+        userData.lastUpdate = Date.now();
+        localStorage.setItem(userDataKey,JSON.stringify(userData));
+        console.log('---updateUser_lastUpdate'); */
+        console.log('USER getUser_sex: OK');
+        return 'logined_man';
+    }    
+}
+
+
 
 
 

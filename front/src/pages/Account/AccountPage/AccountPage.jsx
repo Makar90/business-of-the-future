@@ -13,27 +13,6 @@ export default function AccountPage(){
         //window.location.reload(false);
     }
 
-/*     const auth = getAuth();
-    onAuthStateChanged(auth, (user) => {
-        if (user) {
-            // User is signed in, see docs for a list of available properties
-            // https://firebase.google.com/docs/reference/js/auth.user
-            //const uid = user.uid;
-            //console.log (uid);    
-            //console.log (user);             
-            
-            let userField=document.querySelector('.account__userInfo');
-            userField.innerHTML= user.email+'<br>'+user.uid;
-            // ...
-        } else {
-            // User is signed out
-            // ...
-            let userField=document.querySelector('.account__userInfo');
-            userField.innerHTML="not login";
-        }
-    }); */
-    //console.log(getUser_LocalStorage())
-
     function getUserInfo(){
         let user = getUser_LocalStorage();
         if(user){

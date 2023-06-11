@@ -4,7 +4,7 @@ let userDataKey_LocalStorage='user';
 let userLocalStoreUpdateTime = 1000*10//1000*60*60*4;
 
 
-export function createUser_LocalStorage(userLogin){
+/* export function createUser_LocalStorage(userLogin){
     //setUserLoginData(value);
     let userData_LocalStorage={
         user: userLogin,
@@ -12,13 +12,13 @@ export function createUser_LocalStorage(userLogin){
         lastUpdate : Date.now(),        
     }
     localStorage.setItem(userDataKey_LocalStorage,JSON.stringify(userData_LocalStorage));
-}
+} */
 
-export function setUser_LastUpdate_LocalStorage(userData_LocalStorage){
+/* export function setUser_LastUpdate_LocalStorage(userData_LocalStorage){
     userData_LocalStorage.lastUpdate = Date.now();
     setUser_LocalStorage(userData_LocalStorage);
     console.log(`User_LocalStorage 'last Update' updated`);
-}
+} */
 
 export function getUser_LocalStorage(){
     let userData_LocalStorage = JSON.parse( localStorage.getItem(userDataKey_LocalStorage));
@@ -40,9 +40,9 @@ export function getUser_LocalStorage(){
     return userData_LocalStorage;
 }
 
-export function removeUser_LocalStorage(){
+/* export function removeUser_LocalStorage(){
     localStorage.removeItem(userDataKey_LocalStorage);
-}
+} */
 
 function setUser_LocalStorage(userData_LocalStorage){
     localStorage.setItem(userDataKey_LocalStorage,JSON.stringify(userData_LocalStorage));
