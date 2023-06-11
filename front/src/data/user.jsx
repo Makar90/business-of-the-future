@@ -1,6 +1,7 @@
 //import {AuthStatus} from '../components/Account/AuthStatus/AuthStatus.jsx';
 
 let userDataKey='user';
+export let userLogin = false;
 //let userLocalStoreUpdateTime = 1000*10//1000*60*60*4;
 
 
@@ -12,6 +13,8 @@ export function createUser(user, lastActivity, lastUpdate){
         lastUpdate : lastUpdate === undefined ? Date.now() : lastUpdate,        
     }
     localStorage.setItem(userDataKey,JSON.stringify(userData));
+    console.log('createUser: OK');
+    window.location.reload(false);
 }
 
 function checkUser(){
@@ -19,16 +22,16 @@ function checkUser(){
     if(userData){
         return true;
     }else{
+        //window.location.reload(false);
         return false;
     }
 }
 
 export function removeUser(){
     localStorage.removeItem(userDataKey);
+    console.log('removeUser: OK');
+    window.location.reload(false);
 }
-
-
-
 
 export function updateUser_lastActivity(){
     if(!checkUser()){

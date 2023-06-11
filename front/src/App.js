@@ -11,8 +11,15 @@ function App() {
         //updateUser_lastUpdate();
     }
 
+    /* function a() {
+        window.location.reload(false);
+    } */
+
     return (
         <div className='wrapper' onClick={UserAction}>
+            {/* <button onClick={a}>
+                window.location.reload(false);
+            </button> */}
             <Header />
             <Main />
             <Footer />

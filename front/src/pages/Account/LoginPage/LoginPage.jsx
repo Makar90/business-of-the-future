@@ -15,7 +15,6 @@ import './loginPage.scss';
 import {onAuthStateChanged } from "firebase/auth";
 import { signOut } from "firebase/auth";
 
-import { /* createUser_LocalStorage, */ getUser_LocalStorage } from '../../../data/usersLocalStorage.jsx';
 import {createUser} from '../../../data/user.jsx';
 
 export default function Login(){
@@ -29,10 +28,12 @@ export default function Login(){
          signInWithEmailAndPassword(auth, email, password)
              //.then (console.log)
              .then (({user}) => {
-                //createUser_LocalStorage(user);
+                navigate ('/'); 
                 createUser(user);
-                navigate ('/account');
-                document.querySelector('.loginPage__user').innerHTML = getUser_LocalStorage().user.email;                 
+                //navigate ('/account');
+                //document.querySelector('.loginPage__user').innerHTML = getUser_LocalStorage().user.email;  
+                
+                //window.location.reload(false);             
              })
              //.catch (console.error)
              //.catch (() => alert('invalid user'))

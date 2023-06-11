@@ -8,9 +8,8 @@ export default function AccountPage(){
     const navigate= useNavigate();
 
     function LoginOut(){
-        LogOut();
         navigate ('/');
-        //window.location.reload(false);
+        LogOut();
     }
 
     function getUserInfo(){

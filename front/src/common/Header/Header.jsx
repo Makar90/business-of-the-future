@@ -10,28 +10,21 @@ import {getUser_sex} from '../../data/user.jsx';
 
 export default function Header() {
     //let login_flag='false'; // logined_man logined_female
-    /*const[userLogin, setUserLogin] = useState('false');
-
+    /*const[userLogin, setUserLogin] = useState(false);
     function RenderAcciuntIco(){
         const auth = getAuth();
         onAuthStateChanged(auth, (user) => {
-            if (user && userLogin){ // !userInfo) {               
-                //changeLogin_flag('logined_man');
-                //console.log(login_flag);
-                setUserLogin('logined_man');
+            if (user && userLogin){ // !userInfo) { 
+                //setUserLogin('logined_man');
+                setUserLogin(getUser_sex());
                 console.log('RenderAcciuntIco: man');
-                
-                // ...
+
             } else {
-                //changeLogin_flag('false');
                 setUserLogin('false');
                 console.log('RenderAcciuntIco: error');
             }
         }); 
-        //setUserLogin(getUser_sex());
-        //console.log(getUser_sex());
     }*/
-
     /*function UpdateAccountIcon(){
         setTimeout( ()=>{
             RenderAcciuntIco();
@@ -40,7 +33,8 @@ export default function Header() {
     }
     UpdateAccountIcon();*/
     //RenderAcciuntIco();
-    let userLogin2=getUser_sex();   
+       
+    
 
 
     function MenuOpenClose(){
@@ -125,7 +119,7 @@ export default function Header() {
                     
                     <div className="header__middle-right">
                         {/* {accIco} */}
-                       {/*  <HeadersIcon icon_name={userLogin==='logined_man'?    'Logined_man' : 
+                        {/* <HeadersIcon icon_name={userLogin==='logined_man'?    'Logined_man' : 
                                                 userLogin==='logined_female'? 'Logined_female':
                                                                                 'Login'} 
                                     link={      userLogin==='logined_man'?    '/account' : 
@@ -133,13 +127,13 @@ export default function Header() {
                                                                                 '/login'}
                                     onClickFunc={MenuClose}/> */}
 
-                        <HeadersIcon icon_name={userLogin2==='logined_man'?    'Logined_man' : 
-                                                userLogin2==='logined_female'? 'Logined_female':
+                        <HeadersIcon icon_name={getUser_sex()==='logined_man'?    'Logined_man' : 
+                                                getUser_sex()==='logined_female'? 'Logined_female':
                                                                                 'Login'} 
-                                    link={      userLogin2==='logined_man'?    '/account' : 
-                                                userLogin2==='logined_female'? '/account':
+                                    link={      getUser_sex()==='logined_man'?    '/account' : 
+                                                getUser_sex()==='logined_female'? '/account':
                                                                                 '/login'}
-                                    onClickFunc={MenuClose}/>
+                                    onClickFunc={MenuClose}/> 
 
 
                         <HeadersIcon icon_name='Basket' 
