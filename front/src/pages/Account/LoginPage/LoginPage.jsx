@@ -23,17 +23,20 @@ export default function Login(){
 
      const navigate= useNavigate();
 
+     
+
      const handleLoginFunc = (email, password) =>{
+        let logimMessegeField = document.querySelector('.loginPage__message');
          const auth = getAuth();
          signInWithEmailAndPassword(auth, email, password)
              //.then (console.log)
              .then (({user}) => {
-                navigate ('/'); 
-                createUser(user);
-                //navigate ('/account');
-                //document.querySelector('.loginPage__user').innerHTML = getUser_LocalStorage().user.email;  
-                
-                //window.location.reload(false);             
+                if (user.emailVerified){
+                    navigate ('/'); 
+                    createUser(user);
+                }else{
+                    logimMessegeField.innerHTML = 'E-mail not verified'
+                }         
              })
              //.catch (console.error)
              //.catch (() => alert('invalid user'))
@@ -42,12 +45,10 @@ export default function Login(){
                 //console.log(Error.code);
                 //console.log(Error.message);
                 if(Error.code && Error.message){
-                    document.querySelector('.loginPage__message').innerHTML = //Error.code + '<br>'+ 
-                                                                        Error.code.split('/')[1] + '<br>' +
-                                                                        Error.message;
+                    logimMessegeField.innerHTML = //Error.code + '<br>'+ 
+                                                Error.code.split('/')[1] + '<br>' +
+                                                Error.message;
                 }
-                                                                        
-                //errorField.innerHTML=Error.split(':')[3];
             })
      };
 
