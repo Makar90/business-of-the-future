@@ -1,7 +1,7 @@
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import {removeUser} from '../../../data/user.jsx';
 
-export async function AuthStatus(/* userData_LocalStorage */){
+export async function AuthStatus(){
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
         if (user) {

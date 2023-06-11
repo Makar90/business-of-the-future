@@ -1,10 +1,8 @@
-//import {AuthStatus} from '../components/Account/AuthStatus/AuthStatus.jsx';
-
 let userDataKey='user';
-export let userLogin = false;
+//export let userLogin = false;
 //let userLocalStoreUpdateTime = 1000*10//1000*60*60*4;
 
-
+//base user function
 export function createUser(user, lastActivity, lastUpdate){
     //setUserLoginData(value);
     let userData={
@@ -16,9 +14,16 @@ export function createUser(user, lastActivity, lastUpdate){
     console.log('createUser: OK');
     window.location.reload(false);
 }
+export function removeUser(){
+    localStorage.removeItem(userDataKey);
+    console.log('removeUser: OK');
+    window.location.reload(false);
+}
+//---------------------------
 
+//internal user function
 function checkUser(){
-    let userData = JSON.parse( localStorage.getItem(userDataKey));
+    let userData = JSON.parse(localStorage.getItem(userDataKey));
     if(userData){
         return true;
     }else{
@@ -26,24 +31,25 @@ function checkUser(){
         return false;
     }
 }
-
-export function removeUser(){
-    localStorage.removeItem(userDataKey);
-    console.log('removeUser: OK');
-    window.location.reload(false);
+function getUser(){
+    return JSON.parse(localStorage.getItem(userDataKey));
 }
+function setUser(userData){
+    localStorage.setItem(userDataKey,JSON.stringify(userData));
+}
+//---------------------------
 
+//control user function
 export function updateUser_lastActivity(){
     if(!checkUser()){
         console.log('USER updateUser_lastActivity: error');
         return false;
     }
-    let userData = JSON.parse(localStorage.getItem(userDataKey));
+    let userData = getUser()
     userData.lastActivity = Date.now();
-    localStorage.setItem(userDataKey,JSON.stringify(userData));
+    setUser(userData)
     console.log('USER updateUser_lastActivity: OK');
 }
-
 export function updateUser_lastUpdate(){
     if(!checkUser()){
         console.log('updateUser_lastUpdate: error');
@@ -54,19 +60,17 @@ export function updateUser_lastUpdate(){
     localStorage.setItem(userDataKey,JSON.stringify(userData));
     console.log('USER updateUser_lastUpdate: OK');
 }
-
 export function getUser_sex(){
     if(!checkUser()){
         console.log('USER getUser_sex: error');
         return false;
-    } else {
-        /* let userData = JSON.parse(localStorage.getItem(userDataKey));
-        userData.lastUpdate = Date.now();
-        localStorage.setItem(userDataKey,JSON.stringify(userData));
-        console.log('---updateUser_lastUpdate'); */
-        console.log('USER getUser_sex: OK');
-        return 'logined_man';
-    }    
+    }
+    console.log('USER getUser_sex: OK');
+    return 'logined_man';
+}
+
+export function temp_getUser(){
+    return getUser();
 }
 
 

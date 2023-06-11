@@ -1,7 +1,7 @@
 import {useNavigate} from 'react-router-dom';
 import {LogOut} from '../../../components/Account/LogOut/LogOut.jsx';
 
-import { getUser_LocalStorage} from "../../../data/usersLocalStorage";
+import {temp_getUser} from '../../../data/user.jsx';
 
 
 export default function AccountPage(){
@@ -13,7 +13,7 @@ export default function AccountPage(){
     }
 
     function getUserInfo(){
-        let user = getUser_LocalStorage();
+        let user = temp_getUser();
         if(user){
             document.querySelector('.account__userInfo').innerHTML =    
                 user.user.email + '<br>'+

@@ -4,13 +4,28 @@ import './form.scss';
 const Form = ({handleTitle, handleFunk}) =>{
     const[email, setEmail] = useState('');
     const[pass, setPass]=useState('');
+    const[buttonDisabledFlag, setButtonDisabledFlag]=useState(true);
+
+    //let buttonDisabledFlag = true;
+    
+    function checkEmail(value){
+        setEmail(value);
+        let errorField = document.querySelector('.errors');
+        if(value !== 'test1@gmail.com'){
+            errorField.innerHTML = '';
+            setButtonDisabledFlag(false);
+        }else{
+            errorField.innerHTML = 'invalid Email - test1@gmail.com';
+            setButtonDisabledFlag(true);
+        }
+    }
 
     return(
         <div className="form">
             <input
                 type='email'
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => checkEmail(e.target.value)}
                 placeholder = 'email'
             />
 
@@ -21,9 +36,10 @@ const Form = ({handleTitle, handleFunk}) =>{
                 placeholder = 'pass'
             />
 
-            <button onClick = {() => handleFunk(email, pass)}>
+            <button disabled = {buttonDisabledFlag} onClick = {() => handleFunk(email, pass)}>
                 {handleTitle}
             </button>
+            <p className="errors"></p>
         </div>        
     )
 };

@@ -2,7 +2,6 @@
 import './header.scss';
 import { Link } from 'react-router-dom';
 import HeadersIcon from '../../components/HeadersIcon/HeadersIcon.jsx';
-//import MenuButton from '../../components/MenuButton/MenuButton.jsx';
 
 //import { useState } from "react";
 //import { getAuth, onAuthStateChanged } from "firebase/auth";
@@ -10,6 +9,7 @@ import {getUser_sex} from '../../data/user.jsx';
 
 export default function Header() {
     //let login_flag='false'; // logined_man logined_female
+    
     /*const[userLogin, setUserLogin] = useState(false);
     function RenderAcciuntIco(){
         const auth = getAuth();
@@ -24,19 +24,16 @@ export default function Header() {
                 console.log('RenderAcciuntIco: error');
             }
         }); 
-    }*/
-    /*function UpdateAccountIcon(){
-        setTimeout( ()=>{
-            RenderAcciuntIco();
-            console.log('timeout');
-        }, 0 );
     }
-    UpdateAccountIcon();*/
-    //RenderAcciuntIco();
-       
-    
-
-
+    //function UpdateAccountIcon(){
+    //    setTimeout( ()=>{
+    //        RenderAcciuntIco();
+    //        console.log('timeout');
+    //    }, 0 );
+    //}
+    UpdateAccountIcon();
+    RenderAcciuntIco();*/
+           
     function MenuOpenClose(){
         let menuOpenButton=document.querySelector('.header__middle-left-menuOpen');
         let menuCloseButton=document.querySelector('.header__middle-left-menuClose');
@@ -52,7 +49,8 @@ export default function Header() {
         if(menuCloseButton){
             MenuOpenClose();
         }
-    }
+    };
+    
     return(
         <header className="header">
             <div className="container header__container">
