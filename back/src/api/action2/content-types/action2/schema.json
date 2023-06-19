@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "action2s",
+  "info": {
+    "singularName": "action2",
+    "pluralName": "action2s",
+    "displayName": "ActionSingleType",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Action2": {
+      "type": "string"
+    }
+  }
+}
