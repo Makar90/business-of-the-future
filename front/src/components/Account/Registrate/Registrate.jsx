@@ -1,6 +1,7 @@
 import {Form} from '../Form/Form.jsx';
 import { getAuth, createUserWithEmailAndPassword,sendEmailVerification  } from "firebase/auth";
 import {useNavigate} from 'react-router-dom';
+import {createUser} from '../../../data/user.jsx';
 //import {useDispatch} from 'react-redux';
 //import {setUser} from '......store/slices/userSlices';
 
@@ -23,7 +24,8 @@ const Registrate= () => {
                         // Email verification sent!
                         // ...
                     });
-                navigate ('/');
+                navigate ('/'); 
+                createUser(user); 
             })
             .catch((error) => {
                 const errorCode = error.code;

@@ -31,12 +31,14 @@ export default function Login(){
          signInWithEmailAndPassword(auth, email, password)
              //.then (console.log)
              .then (({user}) => {
-                if (user.emailVerified){
+                /* if (user.emailVerified){
                     navigate ('/'); 
                     createUser(user);
                 }else{
                     logimMessegeField.innerHTML = 'E-mail not verified'
-                }         
+                } */
+                navigate ('/'); 
+                createUser(user);         
              })
              //.catch (console.error)
              //.catch (() => alert('invalid user'))
