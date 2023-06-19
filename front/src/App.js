@@ -6,6 +6,11 @@ import Footer from './common/Footer/Footer';
 import { updateUser_lastActivity, /* updateUser_lastUpdate */ } from './data/user.jsx';
 
 function App() {
+
+    /* fetch('http://localhost:1337/api/products')
+        .then(data => data.json())
+        .then(data => console.log(data)) */
+
     function UserAction() {
         updateUser_lastActivity();
         //updateUser_lastUpdate();
