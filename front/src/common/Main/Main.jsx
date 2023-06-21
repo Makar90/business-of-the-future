@@ -10,7 +10,7 @@ import ShopongBin from '../../pages/ShopongBin/ShopongBin.jsx';
 //import Home from '../../pages/Home/Home';
 import Shopers from '../../pages/Products/Shoper/Shopers.jsx';
 
-export default function Main(){
+export default function Main(props){
     return(
         <main>
             <Menu/>
@@ -22,8 +22,8 @@ export default function Main(){
                     <Route path='/registrate' element={<RegistratePage />} /> 
                     <Route path='/shopongbin' element={<ShopongBin />} />
                     {/* <Route path='/' element={<Home />} />  */}
-                    <Route path='/' element={<Shopers />} />
-                    <Route path='/shopers' element={<Shopers />} />
+                    <Route path='/' element={<Shopers ProductsData={props.ProductsData}   />} />
+                    <Route path='/shopers' element={<Shopers ProductsData={props.ProductsData}  />} />
                 </Routes>
             {/* </div>  */}           
         </main>

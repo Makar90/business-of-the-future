@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "site_map_product_types",
+  "info": {
+    "singularName": "site-map-product-type",
+    "pluralName": "site-map-product-types",
+    "displayName": "Site_map_product_type",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "Шопери",
+        "Не шопери"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "site_map_product_types"
+    },
+    "site_map_product_type_groups": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::site-map-product-type-group.site-map-product-type-group",
+      "mappedBy": "site_map_product_types"
+    }
+  }
+}

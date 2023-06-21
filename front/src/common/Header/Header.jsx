@@ -7,7 +7,9 @@ import HeadersIcon from '../../components/HeadersIcon/HeadersIcon.jsx';
 //import { getAuth, onAuthStateChanged } from "firebase/auth";
 import {getUser_sex} from '../../data/user.jsx';
 
-export default function Header() {
+export default function Header(props) {
+    let ProductsData=props.ProductsData;
+    console.log("TEST header"+ProductsData);
     //let login_flag='false'; // logined_man logined_female
     
     /*const[userLogin, setUserLogin] = useState(false);

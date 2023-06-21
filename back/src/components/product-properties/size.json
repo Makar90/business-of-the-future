@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_product_properties_sizes",
+  "info": {
+    "displayName": "size_bag",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "height": {
+      "type": "string",
+      "required": true
+    },
+    "width": {
+      "type": "string",
+      "required": true
+    },
+    "deep": {
+      "type": "string"
+    },
+    "handle_height": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

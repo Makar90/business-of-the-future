@@ -3,13 +3,17 @@
 import Header from './common/Header/Header';
 import Main from './common/Main/Main';
 import Footer from './common/Footer/Footer';
+import useFeatch from 'react-fetch-hook'
 import { updateUser_lastActivity, /* updateUser_lastUpdate */ } from './data/user.jsx';
 
 function App() {
+    const { isLoading, data } = useFeatch('http://localhost:1337/api/products?populate=*')
+    //http://localhost:1337/api/products
+    //http://localhost:1337/api/products?locale=en
+    //http://localhost:1337/api/products?populate=
+    let ProductsData = data;
+    console.log('Api request: get ProductsData; http://localhost:1337/api/products?populate=*');
 
-    /* fetch('http://localhost:1337/api/products')
-        .then(data => data.json())
-        .then(data => console.log(data)) */
 
     function UserAction() {
         updateUser_lastActivity();
@@ -25,16 +29,17 @@ function App() {
             {/* <button onClick={a}>
                 window.location.reload(false);
             </button> */}
-            <Header />
-            <Main />
+            <Header ProductsData={ProductsData} />
+            {isLoading ?
+                '<h1>Is Loading...</h1>'
+                :
+                <Main ProductsData={ProductsData} />
+            }
             <Footer />
-            {/* <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/instruction' element={<Instruction />} />
-                </Routes> */}
         </div >
-
     );
 }
 
 export default App;
+
+

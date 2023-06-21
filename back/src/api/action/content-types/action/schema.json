@@ -35,7 +35,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::product.product",
-      "mappedBy": "Actions"
+      "mappedBy": "actions"
     }
   }
 }
