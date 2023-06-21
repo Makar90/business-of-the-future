@@ -1,6 +1,8 @@
 //import { useState } from "react";
 //import GetProducts from "../../../data/product.jsx";
 //import useFeatch from 'react-fetch-hook'
+import ProductCard from '../../../components/Product-card/ProductCard.jsx';
+import './shopers.scss';
 
 export default function Shopers(props){  
 /*     const{ isLoading, data} = useFeatch('http://localhost:1337/api/products?populate=*')
@@ -27,13 +29,30 @@ export default function Shopers(props){
 
 
     //const[w,setW] = useState(GetProducts());
-    let dataX = props.ProductsData;
-    //console.log(dataX);
+    
+    console.log(props.ProductsData);
+
 
     return(
         <div className="container"> 
             <h2>Shopers</h2>
-            <h2>{dataX.data[0].attributes.description}</h2>
+            <div className="products">
+                {props.ProductsData.data.map((item,index)=>( 
+                    <ProductCard
+                        key={item.id}
+                        productid={item.id}
+                        name={item.attributes.name}
+                        imageUrl={item.attributes.images.data[0].attributes.formats.small?.url ? 
+                            item.attributes.images.data[0].attributes.formats.small.url
+                             : 
+                            item.attributes.images.data[0].attributes.formats.thumbnail.url}
+                        imageAlternativeText={item.attributes.images.data[0].attributes.alternativeText}
+                        colore={item.attributes.colore}
+                        price={item.attributes.price_hrn}
+                        description={item.attributes.description}
+                    />
+                ))}
+            </div>
         </div>
         
     )
