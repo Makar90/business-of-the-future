@@ -36,23 +36,25 @@ export default function Shopers(props){
     return(
         <div className="container"> 
             {/* <h2>Shopers</h2> */}
-            <div className="products">
-                {props.ProductsData.data.map((item,index)=>( 
-                    <ProductCard
-                        key={item.id}
-                        productid={item.id}
-                        name={item.attributes.name}
-                        imageUrl={item.attributes.images.data[0].attributes.formats.small?.url ? 
-                            item.attributes.images.data[0].attributes.formats.small.url
-                             : 
-                            item.attributes.images.data[0].attributes.formats.thumbnail.url}
-                        imageAlternativeText={item.attributes.images.data[0].attributes.alternativeText}
-                        colore={item.attributes.colore}
-                        price={item.attributes.price_hrn}
-                        description={item.attributes.description}
-                    />
-                ))}
-            </div>
+            {props.ProductsData !== undefined &&
+                <div className="products">
+                    {props.ProductsData.data.map((item,index)=>( 
+                        <ProductCard
+                            key={item.id}
+                            productid={item.id}
+                            name={item.attributes.name}
+                            imageUrl={item.attributes.images.data[0].attributes.formats.small?.url ? 
+                                item.attributes.images.data[0].attributes.formats.small.url
+                                : 
+                                item.attributes.images.data[0].attributes.formats.thumbnail.url}
+                            imageAlternativeText={item.attributes.images.data[0].attributes.alternativeText}
+                            colore={item.attributes.colore}
+                            price={item.attributes.price_hrn}
+                            description={item.attributes.description}
+                        />
+                    ))}
+                </div>
+            }            
         </div>
         
     )
