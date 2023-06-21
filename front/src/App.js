@@ -7,7 +7,7 @@ import useFeatch from 'react-fetch-hook'
 import { updateUser_lastActivity, /* updateUser_lastUpdate */ } from './data/user.jsx';
 
 function App() {
-    const { isLoading, data } = useFeatch('http://localhost:1337/api/products?populate=*')
+    const { isLoading, data, error } = useFeatch('http://7localhost:1337/api/products?populate=*')
     //http://localhost:1337/api/products
     //http://localhost:1337/api/products?locale=en
     //http://localhost:1337/api/products?populate=
@@ -23,6 +23,7 @@ function App() {
     /* function a() {
         window.location.reload(false);
     } */
+    console.log(error);
 
     return (
         <div className='wrapper' onClick={UserAction}>
@@ -31,9 +32,13 @@ function App() {
             </button> */}
             <Header ProductsData={ProductsData} />
             {isLoading ?
-                '<h1>Is Loading...</h1>'
+                <h2>It is Loading...</h2>
                 :
-                <Main ProductsData={ProductsData} />
+                error ?
+                    <h2> ERROR API </h2>
+                    :
+                    < Main ProductsData={ProductsData} />
+
             }
             <Footer />
         </div >
