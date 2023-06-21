@@ -1,21 +1,32 @@
 .product{
     border:1px solid gray;
-    //border-radius: 10px;
+    border-radius: 10px;
+    //background-color: white;
     padding: 10px;
     display:flex;
     flex-direction: column;
     gap:5px;
+    transition: 1s;
+    &:hover{
+        cursor: pointer;
+        background-color:rgb(186, 181, 148);
+        transition: 0.5s;
+    }
     &__articul{
         text-align: right;
         color: darkgrey;
     }
     &__name{
         text-align: center;
+        //word-wrap: break-word;
+        word-break: break-all;
     }
     &__image-frame{
         margin:0 auto;
         width:100%;
-        height: 200px;
+        height: 210px;
+        display: flex;
+        align-items: center;
 
         /* background-size: contain;
         background-repeat: no-repeat;
@@ -26,14 +37,19 @@
         width:100%;
         height: 100%;
         object-fit: contain;
+        border-radius:10px;
     }
     &__colore{
-        width: 20px;
-        height:20px;
+        width: 14px;
+        height:14px;
         border-radius: 45%;
     }
     &__price{
         color:orangered;
         font-weight: 600;
+    }
+    &__description{
+        //word-wrap: break-word;
+        word-break: break-all;
     }
 }

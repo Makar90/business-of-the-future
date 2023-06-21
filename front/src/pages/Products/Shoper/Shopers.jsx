@@ -35,7 +35,7 @@ export default function Shopers(props){
 
     return(
         <div className="container"> 
-            <h2>Shopers</h2>
+            {/* <h2>Shopers</h2> */}
             <div className="products">
                 {props.ProductsData.data.map((item,index)=>( 
                     <ProductCard

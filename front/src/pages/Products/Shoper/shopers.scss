@@ -1,7 +1,7 @@
 .products{
-    /* display: flex;
-    flex-direction: column;
-    gap:10px; */
     display:grid;
     grid-template-columns: repeat(2, 1fr);
+    //background-color: grey;
+    //border:1px solid gray;
+    grid-gap:7px; 
 }
