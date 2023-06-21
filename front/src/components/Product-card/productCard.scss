@@ -5,7 +5,10 @@
     display:flex;
     flex-direction: column;
     gap:5px;
-
+    &__articul{
+        text-align: right;
+        color: darkgrey;
+    }
     &__name{
         text-align: center;
     }

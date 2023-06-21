@@ -18,6 +18,7 @@ export default function ProductCard(props){
     return(
         <div className="product" productid={props.productid}>
             <h4 className="product__name">{props.name}</h4>
+            <p className='product__articul'>Артикул: {props.productid}</p>
             <div className="product__image-frame" /* style={{backgroundImage:`url(http://localhost:1337${props.imageUrl})`}} */>
                 <img className="product__image" 
                         src={`http://localhost:1337${props.imageUrl}`} 
