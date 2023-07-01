@@ -23,6 +23,7 @@ export default function AccountPage(){
         }else{
             document.querySelector('.account__userInfo').innerHTML = "not login";
         }
+        
     }
 
     return(
